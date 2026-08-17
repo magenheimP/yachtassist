@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Info hub content (guide, procedures, laws, about, contact, etc).
+// One row per (slug, locale) so future locales don't need schema changes.
+model Article {
+  id        String   @id @default(cuid())
+  slug      String
+  locale    String   @default("en")
+  title     String
+  body      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([slug, locale])
+}
+
+// Weekly fuel price entries. Admin appends a new row each week; the
+// current price shown on the site is simply the most recent row.
+// Keeping history for free is a nice side effect and costs nothing extra.
+model FuelPrice {
+  id            String   @id @default(cuid())
+  retailPrice   Decimal  @db.Decimal(6, 3)
+  dutyFreePrice Decimal  @db.Decimal(6, 3)
+  currency      String   @default("EUR")
+  createdAt     DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+model NewsletterSignup {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+
+  // Optional context, collected later (not in the v0 signup form).
+  country  String?
+  boatType String?
+  role     String?
+}

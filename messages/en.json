@@ -1,0 +1,88 @@
+{
+  "Metadata": {
+    "siteName": "Yacht Assist Montenegro",
+    "title": "Yacht Assist Montenegro",
+    "description": "The single most useful place to plan and run a yacht visit to Montenegro: procedures, laws, fuel prices, and verified service providers."
+  },
+  "Nav": {
+    "home": "Home",
+    "guide": "Bring Your Yacht",
+    "procedures": "Procedures",
+    "laws": "Laws & Regulations",
+    "fuelPrice": "Fuel Price",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "Footer": {
+    "tagline": "Independent yachting information for Montenegro.",
+    "rights": "All rights reserved."
+  },
+  "Newsletter": {
+    "heading": "Stay current",
+    "description": "Get notified when procedures, laws, or fuel prices change. No spam.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Subscribe",
+    "success": "You're subscribed. Welcome aboard.",
+    "error": "Something went wrong. Please try again.",
+    "invalidEmail": "Please enter a valid email address."
+  },
+  "Home": {
+    "heroTitle": "Everything you need to bring your yacht to Montenegro",
+    "heroSubtitle": "Clearance, customs, duty-free fuel, insurance, and the rules of Boka Bay — in one place, kept current.",
+    "heroCta": "Read the guide",
+    "sectionsHeading": "Start here",
+    "guideTitle": "Bring Your Yacht to Montenegro",
+    "guideDescription": "The complete checklist: vignette, clearance, customs, insurance, and speed limits.",
+    "proceduresTitle": "Procedures",
+    "proceduresDescription": "Step-by-step clearance, customs, and immigration procedures.",
+    "lawsTitle": "Laws & Regulations",
+    "lawsDescription": "Vignette, insurance minimums, VAT and fuel rules, speed limits.",
+    "fuelPriceTitle": "Fuel Price",
+    "fuelPriceDescription": "This week's retail and duty-free yacht fuel prices."
+  },
+  "Guide": {
+    "title": "Bring Your Yacht to Montenegro",
+    "intro": "A practical, always-current checklist for arriving in Montenegro by yacht — from first contact with port authorities to your first night at anchor."
+  },
+  "Procedures": {
+    "title": "Procedures",
+    "intro": "Clearance, customs, and immigration procedures for yachts arriving in Montenegro."
+  },
+  "Laws": {
+    "title": "Laws & Regulations",
+    "intro": "Vignette and navigation permits, insurance minimums, VAT and duty-free fuel rules, and speed limits in Montenegrin waters."
+  },
+  "FuelPrice": {
+    "title": "Fuel Price",
+    "intro": "Weekly fuel prices for Montenegro, updated by hand every week.",
+    "retailLabel": "Retail (road) diesel",
+    "dutyFreeLabel": "Duty-free yacht diesel",
+    "perLiter": "per liter",
+    "lastUpdated": "Last updated",
+    "noData": "No fuel price has been entered yet."
+  },
+  "About": {
+    "title": "About",
+    "intro": "Why this site exists.",
+    "body": "Yacht Assist Montenegro exists to be the single most useful place to plan and run a yacht visit to Montenegro. Our starting point is a simple observation: the real competition isn't another directory — it's a captain Googling around and piecing together scattered Google Maps pins. We're building the info hub first: clearance and customs procedures, Montenegrin yacht laws, and a fuel price that's kept genuinely current, week to week. A directory of verified service providers — agents, provisioning, maintenance, transfers, chandlery, berths — comes next, free for yachters to browse and contact.",
+    "verificationNote": "Content on this site is reviewed and updated by hand. If you spot something out of date or incorrect, please let us know via the contact page."
+  },
+  "Contact": {
+    "title": "Contact",
+    "intro": "Questions, corrections, or partnership inquiries — get in touch.",
+    "emailLabel": "Email",
+    "correctionsNote": "Spotted outdated or incorrect information on a procedures, laws, or fuel price page? Please tell us — this site is only useful if it stays accurate."
+  },
+  "Admin": {
+    "title": "Admin",
+    "passwordLabel": "Password",
+    "submit": "Sign in",
+    "invalidPassword": "Incorrect password.",
+    "fuelPriceHeading": "Update fuel price",
+    "retailLabel": "Retail price (EUR/liter)",
+    "dutyFreeLabel": "Duty-free price (EUR/liter)",
+    "save": "Save",
+    "saved": "Saved."
+  }
+}
