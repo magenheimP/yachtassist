@@ -56,9 +56,12 @@ and follow these rules:
 
 ### Preview links
 
-- Partner's version (`partner`): _Petar: fill in after the Vercel setup_
-- Petar's dev version (`dev`): _fill in_
-- Live site (`main`): _fill in_
+- Partner's version (`partner`): https://yachtassist-git-partner-yachtassistme.vercel.app
+- Petar's dev version (`dev`): https://yachtassist-git-dev-yachtassistme.vercel.app
+- Live site (`main`): https://yachtassist.vercel.app
+
+Each push to a branch rebuilds its link in 1–2 minutes. Vercel project:
+`yachtassistme/yachtassist` (Hobby plan). Production branch is `main`.
 
 ---
 
