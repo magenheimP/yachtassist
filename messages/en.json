@@ -1,0 +1,299 @@
+{
+  "Metadata": {
+    "siteName": "Yacht Assist Montenegro",
+    "title": "Yacht Assist Montenegro",
+    "description": "The single most useful place to plan and run a yacht visit to Montenegro: procedures, laws, fuel prices, and verified service providers."
+  },
+  "Nav": {
+    "home": "Home",
+    "guide": "Arrival Guide",
+    "fuelPrice": "Fuel Price",
+    "contractors": "Contractors",
+    "contact": "Contact"
+  },
+  "Footer": {
+    "tagline": "Independent yachting information for Montenegro.",
+    "rights": "All rights reserved."
+  },
+  "Newsletter": {
+    "heading": "Stay current",
+    "description": "Get notified when procedures, laws, or fuel prices change. No spam.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Subscribe",
+    "success": "You're subscribed. Welcome aboard.",
+    "error": "Something went wrong. Please try again.",
+    "invalidEmail": "Please enter a valid email address."
+  },
+  "Home": {
+    "heroTitle": "Everything you need to facilitate your stay in Montenegro",
+    "heroSubtitle": "Clearance, customs, duty-free fuel, insurance, and the rules of Boka Bay — in one place, kept current.",
+    "heroCta": "Read the guide"
+  },
+  "Hub": {
+    "kicker": "Bring your yacht to Montenegro",
+    "tabsLabel": "Guide sections",
+    "soon": "Soon",
+    "proceduresTab": "Clearance",
+    "proceduresTabDescription": "Customs, immigration and the harbour master, step by step.",
+    "vignetteTab": "Vignette & Tourist Tax",
+    "vignetteTabDescription": "Estimate your cruising permit fee and tourist tax.",
+    "lawsTab": "Laws",
+    "lawsTabDescription": "The official laws and decrees, ready to download."
+  },
+  "Procedures": {
+    "title": "Clearance Procedures",
+    "intro": "Clearance, customs, and immigration procedures for yachts arriving in Montenegro."
+  },
+  "Vignette": {
+    "title": "Vignette & Tourist Tax",
+    "intro": "Work out what your vignette (cruising permit) and tourist tax will cost before you arrive.",
+    "sourceNote": "The vignette fee comes from Article 28 of the Law on Yachts, and the tourist tax from the Decree on Tourist Tax for Nautical Tourism Vessels. You can download both from the <laws>Laws</laws> tab. The Harbour Master's office confirms the final amount when you buy the vignette.",
+    "form": {
+      "heading": "Vignette",
+      "useLabel": "Yacht use",
+      "uses": {
+        "private": "Private",
+        "commercial": "Commercial"
+      },
+      "typeLabel": "Boat type",
+      "typePlaceholder": "Select a boat type",
+      "types": {
+        "boatUpTo7m": "Boat under 7 m",
+        "sailing": "Sailing yacht",
+        "motor": "Motor yacht",
+        "multihull": "Multihull yacht",
+        "over24m": "Yacht 24 m or longer"
+      },
+      "lengthLabel": "Length",
+      "lengthPlaceholder": "e.g. 12.5",
+      "lengthUnit": "m",
+      "lengthHint": "Overall length, as on your registration.",
+      "periodLabel": "Valid for",
+      "periodPlaceholder": "Select a period",
+      "periods": {
+        "24h": "24 hours",
+        "7d": "7 days",
+        "1m": "1 month",
+        "3m": "3 months",
+        "6m": "6 months",
+        "1y": "1 year"
+      },
+      "resultKicker": "Vignette fee",
+      "typeOptions": {
+        "boatUpTo7m": "Boat under 7 m",
+        "sailing": "Sailing yacht (7 m to under 24 m)",
+        "motor": "Motor yacht (7 m to under 24 m)",
+        "multihull": "Multihull yacht (7 m to under 24 m)",
+        "over24m": "Yacht 24 m or longer (any type)"
+      },
+      "ranges": {
+        "boatUpTo7m": "shorter than 7 m",
+        "sailing": "7 m to under 24 m",
+        "motor": "7 m to under 24 m",
+        "multihull": "7 m to under 24 m",
+        "over24m": "24 m or longer"
+      },
+      "lengthRangeHint": "Must be {range}.",
+      "lengthError": "Doesn't fit this boat type. Must be {range}.",
+      "resultEmpty": "Fill in the form to see the fee.",
+      "resultInvalid": "The length doesn't fit the boat type you chose.",
+      "adminFeeNote": "Includes the {fee} administrative fee."
+    },
+    "touristTax": {
+      "heading": "Tourist tax",
+      "lengthLabel": "Length",
+      "lengthPlaceholder": "Select a length",
+      "lengths": {
+        "upTo10": "7 to 10 m",
+        "upTo15": "Over 10 m, up to 15 m",
+        "upTo20": "Over 15 m, up to 20 m",
+        "over20": "Over 20 m"
+      },
+      "periodLabel": "Stay",
+      "periodPlaceholder": "Select a period",
+      "periods": {
+        "7d": "Up to 7 days",
+        "15d": "Up to 15 days",
+        "30d": "Up to 30 days",
+        "90d": "Up to 90 days",
+        "1y": "Up to 1 year"
+      },
+      "resultKicker": "Tourist tax",
+      "resultEmpty": "Choose the length and stay to see the tax.",
+      "note": "A flat amount per yacht, covering everyone aboard for the whole period."
+    }
+  },
+  "Laws": {
+    "title": "Laws & Regulations",
+    "intro": "The official laws and decrees that apply to yachts in Montenegro, ready to download.",
+    "documents": {
+      "heading": "Official documents",
+      "intro": "The Montenegrin versions are the legally binding ones; the English versions are translations for reference.",
+      "pages": "{count, plural, one {# page} other {# pages}}",
+      "languages": {
+        "en": "English",
+        "cnr": "Montenegrin"
+      },
+      "items": {
+        "lawOnYachts": {
+          "title": "Law on Yachts",
+          "description": "The main yacht law: registration, entering, staying in and leaving Montenegrin waters, the vignette, chartering, and fines."
+        },
+        "touristTax": {
+          "title": "Decree on Tourist Tax for Nautical Tourism Vessels",
+          "description": "The flat-rate tourist tax for yachts and ships, set by boat length and length of stay."
+        },
+        "visaRegime": {
+          "title": "Decree on Visa Regime",
+          "description": "Which nationalities can enter Montenegro without a visa, and for how long. Worth checking for crew and guests."
+        }
+      }
+    }
+  },
+  "FuelPrice": {
+    "title": "Fuel Price",
+    "intro": "Weekly fuel prices for Montenegro, updated by hand every week.",
+    "retailLabel": "Retail (road) diesel",
+    "dutyFreeLabel": "Duty-free yacht diesel",
+    "perLiter": "per liter",
+    "lastUpdated": "Last updated",
+    "noData": "No fuel price has been entered yet.",
+    "badgeRetail": "Retail",
+    "badgeDutyFree": "Duty-free",
+    "badgeLabel": "Fuel prices per liter: retail {retail}, duty-free yacht {dutyFree}. Updated {updated}."
+  },
+  "Contractors": {
+    "kicker": "Local services",
+    "title": "Contractors",
+    "intro": "Local contractors for yachts in Montenegro, from engine servicing to provisioning and help ashore. Pick a category, then call or email them directly.",
+    "filterLabel": "Filter by category",
+    "all": "All",
+    "marinaNote": "Berthed in a marina? Check with the marina office before a contractor starts work on board. Some marinas, Porto Montenegro among them, require contractors to announce their work in advance.",
+    "listingNote": "Run a yacht service in Montenegro, or spotted outdated details? <contact>Get in touch</contact>.",
+    "categories": {
+      "engines": {
+        "title": "Engines",
+        "description": "Servicing and repair, by engine brand."
+      },
+      "electrical": {
+        "title": "Electrical & Electronics",
+        "description": "Boat electrics, generators, navigation and onboard systems."
+      },
+      "airConditioning": {
+        "title": "Air Conditioning & Appliances",
+        "description": "Air conditioning and appliance repair."
+      },
+      "sailsRigging": {
+        "title": "Sails & Rigging",
+        "description": "Sail repair, making and storage, and rigging."
+      },
+      "paintFiberglass": {
+        "title": "Paint & Fiberglass",
+        "description": "Painting, fiberglass and hull work."
+      },
+      "welding": {
+        "title": "Welding & Stainless Steel",
+        "description": "Welding and stainless steel fabrication."
+      },
+      "interiors": {
+        "title": "Interiors & Carpentry",
+        "description": "Upholstery, covers and awnings, carpentry and teak."
+      },
+      "cranes": {
+        "title": "Cranes",
+        "description": "Crane hire, with lifting capacity where known."
+      },
+      "surveyors": {
+        "title": "Surveyors",
+        "description": "Pre-sale and damage surveys, inspections and expert assessments."
+      },
+      "safety": {
+        "title": "Safety Equipment",
+        "description": "Servicing and inspection of safety equipment."
+      },
+      "chandlery": {
+        "title": "Chandlery & Supplies",
+        "description": "Yacht parts, equipment and supplies."
+      },
+      "provisioning": {
+        "title": "Provisioning",
+        "description": "Food, drinks and supplies for the boat."
+      },
+      "gasWaste": {
+        "title": "Gas & Waste",
+        "description": "Gas supply and black tank disposal."
+      },
+      "cleaning": {
+        "title": "Cleaning & Laundry",
+        "description": "Laundry, and cleaning and polishing on board."
+      },
+      "guardinage": {
+        "title": "Guardinage",
+        "description": "Someone to look after the boat while you're away."
+      },
+      "medical": {
+        "title": "Medical & Dental",
+        "description": "Clinics, labs and dentists for crew and guests."
+      },
+      "vet": {
+        "title": "Vet",
+        "description": "Veterinary care for pets on board."
+      },
+      "florists": {
+        "title": "Florists",
+        "description": "Flowers for the boat and for guests."
+      }
+    },
+    "items": {
+      "yachtProService": "Also Onan marine generators, ABT-TRAC stabilizers, Energy Solutions and E-Plex systems, and Hamann waste treatment systems.",
+      "technomarine": "Engine servicing and repair, and crane hire.",
+      "ditronic": "Boat electrics repair, electrical diagnostics on Kohler and Cummins generators, and gangway electrics (Opacmare, Besenzoni).",
+      "boatservice": "Generators, power systems and watermakers. Also sail repair, making and storage, rigging, stainless steel fabrication, hull and fiberglass work, and teak and other carpentry.",
+      "yachtElectronicalService": "Navigation and cartography, satellite TV and internet, yacht control systems, thermal cameras, NMEA networking, ship tracking and monitoring, underwater lights and marine displays.",
+      "autoKlimePavicevic": "Air conditioning.",
+      "kiko": "Appliance servicing.",
+      "avelYachting": "Sail repair, making and storage, rigging, and guardinage.",
+      "marinArt": "Sails, interiors, deck flooring, tents, cases and covers, a restoration workshop, and general service and maintenance.",
+      "yachtHomeMontenegro": "Interiors and exteriors. Official sales and service point for UK Sailmakers Turkey.",
+      "micicPaint": "Painting and fiberglass.",
+      "ardura": "Painting and black tank disposal.",
+      "lightHouse": "Carpentry.",
+      "legnoSanto": "Carpentry.",
+      "luxUpholstery": "Interior and exterior upholstery, cushions, awnings, winter and protective covers, window protection, bed linen and curtains.",
+      "radulovic": "2.5 t and 3.5 t cranes.",
+      "micanovic": "5 t (14 m) and 8 t (17 m) cranes.",
+      "pmcInvest": "40 t crane.",
+      "montenegroMarineSurveys": "Pre-sale and damage surveys, new boat acceptance inspections, cruising preparation and hull inspections. Also the Montenegro importer of Exide batteries.",
+      "aleksandarBozovic": "Sworn court marine expert and assessor.",
+      "popaj": "Gas supply.",
+      "totalYachtCare": "Daily cleaning and polishing.",
+      "polarClean": "Laundry.",
+      "maxClean": "Laundry.",
+      "adriaticaWash": "Laundry.",
+      "mansaMedica": "General medical clinic.",
+      "vitaFeminae": "Gynecologist.",
+      "mojLab": "Blood tests and lab analysis.",
+      "milmedika": "Blood tests and lab analysis.",
+      "drSevaljevic": "Dental clinic.",
+      "dentalSmile": "Dental clinic."
+    }
+  },
+  "Contact": {
+    "title": "Contact",
+    "intro": "Questions, corrections, or partnership inquiries — get in touch.",
+    "emailLabel": "Email",
+    "correctionsNote": "Spotted outdated or incorrect information on a procedures, laws, or fuel price page? Please tell us — this site is only useful if it stays accurate."
+  },
+  "Admin": {
+    "title": "Admin",
+    "passwordLabel": "Password",
+    "submit": "Sign in",
+    "invalidPassword": "Incorrect password.",
+    "fuelPriceHeading": "Update fuel price",
+    "retailLabel": "Retail price (EUR/liter)",
+    "dutyFreeLabel": "Duty-free price (EUR/liter)",
+    "save": "Save",
+    "saved": "Saved."
+  }
+}
