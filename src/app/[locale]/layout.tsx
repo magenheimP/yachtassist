@@ -1,23 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Schibsted_Grotesk } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
+import { HideOnHome } from "@/components/HideOnHome";
 import { getSiteUrl } from "@/lib/site";
 import "../globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// One sans family for everything, headings included: a free, close stand-in
+// for the paid "Denim" typeface on the design reference.
+const schibsted = Schibsted_Grotesk({
+  variable: "--font-schibsted",
+  subsets: ["latin", "latin-ext"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// Prerendered pages carry the header fuel price. Saving a price in admin
+// revalidates them immediately; this is the fallback if the DB is changed any
+// other way (or was unreachable at build time).
+export const revalidate = 3600;
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -73,13 +76,15 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${schibsted.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider>
           <SiteNav />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
+          <main className="flex flex-1 flex-col">{children}</main>
+          <HideOnHome>
+            <SiteFooter />
+          </HideOnHome>
         </NextIntlClientProvider>
       </body>
     </html>

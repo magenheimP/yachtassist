@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { getLatestFuelPrice } from "@/lib/fuelPrice";
+import { fuelPriceFormatter, getLatestFuelPrice } from "@/lib/fuelPrice";
+import { PageHeader } from "@/components/PageHeader";
 
 export const dynamic = "force-dynamic";
 
@@ -24,12 +25,7 @@ export default async function FuelPricePage({
   const t = await getTranslations("FuelPrice");
   const fuelPrice = await getLatestFuelPrice();
 
-  const formatter = new Intl.NumberFormat(locale, {
-    style: "currency",
-    currency: fuelPrice?.currency ?? "EUR",
-    minimumFractionDigits: 3,
-    maximumFractionDigits: 3,
-  });
+  const formatter = fuelPriceFormatter(locale, fuelPrice?.currency ?? "EUR");
 
   const dateFormatter = new Intl.DateTimeFormat(locale, {
     dateStyle: "long",
@@ -37,47 +33,40 @@ export default async function FuelPricePage({
   });
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
-      <h1 className="text-3xl font-bold tracking-tight">{t("title")}</h1>
-      <p className="mt-3 text-lg text-black/70 dark:text-white/70">
-        {t("intro")}
-      </p>
+    <div>
+      <PageHeader kicker="Updated weekly" title={t("title")} intro={t("intro")} />
 
-      {fuelPrice ? (
-        <>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-lg border border-black/10 p-6 dark:border-white/10">
-              <p className="text-sm font-medium text-black/60 dark:text-white/60">
-                {t("retailLabel")}
-              </p>
-              <p className="mt-2 text-3xl font-semibold">
-                {formatter.format(Number(fuelPrice.retailPrice))}
-              </p>
-              <p className="mt-1 text-sm text-black/50 dark:text-white/50">
-                {t("perLiter")}
-              </p>
+      <div className="mx-auto max-w-3xl px-6 py-16">
+        {fuelPrice ? (
+          <>
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div className="rounded-2xl border border-border-soft bg-white p-8">
+                <p className="text-sm font-semibold tracking-wide text-ink-soft uppercase">
+                  {t("retailLabel")}
+                </p>
+                <p className="mt-3 text-4xl font-normal tracking-tight text-ink">
+                  {formatter.format(Number(fuelPrice.retailPrice))}
+                </p>
+                <p className="mt-1 text-sm text-ink-soft">{t("perLiter")}</p>
+              </div>
+              <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-8">
+                <p className="text-sm font-semibold tracking-wide text-cyan-700 uppercase">
+                  {t("dutyFreeLabel")}
+                </p>
+                <p className="mt-3 text-4xl font-normal tracking-tight text-navy-900">
+                  {formatter.format(Number(fuelPrice.dutyFreePrice))}
+                </p>
+                <p className="mt-1 text-sm text-cyan-700">{t("perLiter")}</p>
+              </div>
             </div>
-            <div className="rounded-lg border border-black/10 p-6 dark:border-white/10">
-              <p className="text-sm font-medium text-black/60 dark:text-white/60">
-                {t("dutyFreeLabel")}
-              </p>
-              <p className="mt-2 text-3xl font-semibold">
-                {formatter.format(Number(fuelPrice.dutyFreePrice))}
-              </p>
-              <p className="mt-1 text-sm text-black/50 dark:text-white/50">
-                {t("perLiter")}
-              </p>
-            </div>
-          </div>
-          <p className="mt-4 text-sm text-black/50 dark:text-white/50">
-            {t("lastUpdated")}: {dateFormatter.format(fuelPrice.createdAt)}
-          </p>
-        </>
-      ) : (
-        <p className="mt-8 text-black/60 dark:text-white/60">
-          {t("noData")}
-        </p>
-      )}
+            <p className="mt-6 text-sm text-ink-soft">
+              {t("lastUpdated")}: {dateFormatter.format(fuelPrice.createdAt)}
+            </p>
+          </>
+        ) : (
+          <p className="text-ink-soft">{t("noData")}</p>
+        )}
+      </div>
     </div>
   );
 }

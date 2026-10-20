@@ -1,5 +1,6 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import {
   clearAdminSessionCookie,
@@ -52,6 +53,8 @@ export async function saveFuelPriceAction(
   }
 
   await addFuelPrice({ retailPrice, dutyFreePrice });
+  // The header shows the price on every page, including prerendered ones.
+  revalidatePath("/[locale]", "layout");
   return { success: true };
 }
 
@@ -65,7 +68,10 @@ export async function saveArticleAction(
 
   const slug = String(formData.get("slug") ?? "");
   const title = String(formData.get("title") ?? "").trim();
-  const body = String(formData.get("body") ?? "").trim();
+  // Browsers submit textarea line breaks as CRLF; store plain LF.
+  const body = String(formData.get("body") ?? "")
+    .replace(/\r\n?/g, "\n")
+    .trim();
 
   if (!ARTICLE_SLUGS.includes(slug as ArticleSlug)) {
     return { error: "Unknown article." };

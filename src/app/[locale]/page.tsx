@@ -1,77 +1,51 @@
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { HUB_HOME } from "@/lib/hub";
 
-export default async function HomePage({
-  params,
-}: PageProps<"/[locale]">) {
+// One screen, no scrolling: the photo covers the whole viewport, behind the
+// see-through header (HeaderShell), and the text is centred in the space below
+// it. The footer is hidden on this page (HideOnHome in the locale layout).
+export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("Home");
 
-  const cards = [
-    {
-      href: "/guide" as const,
-      title: t("guideTitle"),
-      description: t("guideDescription"),
-    },
-    {
-      href: "/procedures" as const,
-      title: t("proceduresTitle"),
-      description: t("proceduresDescription"),
-    },
-    {
-      href: "/laws" as const,
-      title: t("lawsTitle"),
-      description: t("lawsDescription"),
-    },
-    {
-      href: "/fuel-price" as const,
-      title: t("fuelPriceTitle"),
-      description: t("fuelPriceDescription"),
-    },
-  ];
-
   return (
-    <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
-      <section className="max-w-2xl">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          {t("heroTitle")}
-        </h1>
-        <p className="mt-4 text-lg text-black/70 dark:text-white/70">
-          {t("heroSubtitle")}
-        </p>
-        <Link
-          href="/guide"
-          className="mt-6 inline-block rounded-md bg-blue-700 px-5 py-2.5 font-medium text-white hover:bg-blue-800"
-        >
-          {t("heroCta")}
-        </Link>
-      </section>
-
-      <section className="mt-16">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-black/50 dark:text-white/50">
-          {t("sectionsHeading")}
-        </h2>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          {cards.map((card) => (
-            <Link
-              key={card.href}
-              href={card.href}
-              className="rounded-lg border border-black/10 p-5 transition hover:border-black/30 dark:border-white/10 dark:hover:border-white/30"
-            >
-              <h3 className="font-semibold">{card.title}</h3>
-              <p className="mt-1 text-sm text-black/70 dark:text-white/70">
-                {card.description}
-              </p>
-            </Link>
-          ))}
+    <>
+      {/* Background photo (Bay of Kotor, Perast islands), fixed to the full
+          viewport so it also runs behind the header. Decorative: no alt. */}
+      <div className="fixed inset-0 bg-navy-900">
+        <Image
+          src="/images/hero.webp"
+          alt=""
+          fill
+          preload
+          sizes="100vw"
+          className="object-cover"
+        />
+        {/* Darkens the left side, where the text sits, and the top, where the
+            transparent header sits, for contrast. */}
+        <div className="absolute inset-0 bg-linear-to-r from-navy-900/90 via-navy-900/60 to-navy-900/10" />
+        <div className="absolute inset-x-0 top-0 h-56 bg-linear-to-b from-navy-900/80 via-navy-900/35 to-transparent" />
+      </div>
+      <section className="relative flex flex-1 items-center">
+        <div className="mx-auto w-full max-w-[90rem] px-4 py-8 sm:px-8 sm:py-12 lg:px-10">
+          <h1 className="max-w-4xl text-[2.6rem] leading-[1.05] font-normal tracking-tight text-white sm:text-7xl lg:text-[5.5rem]">
+            {t("heroTitle")}
+          </h1>
+          <p className="mt-6 max-w-xl text-lg text-white/70">
+            {t("heroSubtitle")}
+          </p>
+          <Link
+            href={HUB_HOME}
+            className="mt-9 inline-flex items-center gap-2 rounded-full bg-cyan-500 px-6 py-3 text-sm font-semibold text-navy-900 transition-colors hover:bg-cyan-400"
+          >
+            {t("heroCta")}
+            <span aria-hidden>&rarr;</span>
+          </Link>
         </div>
       </section>
-
-      <section className="mt-16 max-w-xl">
-        <NewsletterSignup />
-      </section>
-    </div>
+    </>
   );
 }

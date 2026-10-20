@@ -11,6 +11,16 @@ export async function getLatestFuelPrice() {
   }
 }
 
+// Fuel is quoted to three decimals (e.g. €1.479/l), on the page and in the header.
+export function fuelPriceFormatter(locale: string, currency: string) {
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency,
+    minimumFractionDigits: 3,
+    maximumFractionDigits: 3,
+  });
+}
+
 export async function addFuelPrice(data: {
   retailPrice: number;
   dutyFreePrice: number;

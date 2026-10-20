@@ -32,16 +32,17 @@ export function ArticleForm({
           type="text"
           defaultValue={title}
           required
-          className="rounded-md border border-black/20 px-3 py-2 text-sm dark:border-white/20 dark:bg-transparent"
+          className="rounded-md border border-border-soft px-3 py-2 text-sm"
         />
       </div>
       <div className="flex flex-col gap-1">
         <label htmlFor="body" className="text-sm font-medium">
           Body
         </label>
-        <p className="text-xs text-black/50 dark:text-white/50">
+        <p className="text-xs text-ink-soft">
           Use &quot;## Heading&quot; for section headings, lines starting
-          with &quot;- &quot; for bullet lists, and blank lines between
+          with &quot;- &quot; for bullet lists or &quot;1. &quot; for numbered
+          lists, &quot;**text**&quot; for bold, and blank lines between
           paragraphs.
         </p>
         <textarea
@@ -50,23 +51,23 @@ export function ArticleForm({
           defaultValue={body}
           required
           rows={20}
-          className="rounded-md border border-black/20 px-3 py-2 font-mono text-sm dark:border-white/20 dark:bg-transparent"
+          className="rounded-md border border-border-soft px-3 py-2 font-mono text-sm"
         />
       </div>
       <button
         type="submit"
         disabled={pending}
-        className="mt-1 self-start rounded-md bg-blue-700 px-4 py-2 text-sm font-medium text-white hover:bg-blue-800 disabled:opacity-60"
+        className="mt-1 self-start rounded-md bg-cyan-600 px-4 py-2 text-sm font-medium text-white hover:bg-cyan-700 disabled:opacity-60"
       >
         {pending ? "Saving..." : "Save"}
       </button>
       {state.error && (
-        <p className="text-sm text-red-600 dark:text-red-400">
+        <p className="text-sm text-red-600">
           {state.error}
         </p>
       )}
       {state.success && (
-        <p className="text-sm text-green-700 dark:text-green-400">
+        <p className="text-sm text-green-700">
           Saved. The live page now reflects this content.
         </p>
       )}

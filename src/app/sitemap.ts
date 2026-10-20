@@ -1,16 +1,15 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { getSiteUrl } from "@/lib/site";
+import { HUB_SECTIONS } from "@/lib/hub";
 
 const PATHS = [
   "",
-  "/guide",
-  "/procedures",
-  "/laws",
+  ...HUB_SECTIONS.filter((section) => !section.soon).map((s) => s.href),
   "/fuel-price",
   "/about",
   "/contact",
-] as const;
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getSiteUrl();

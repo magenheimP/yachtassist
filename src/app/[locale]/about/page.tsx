@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { PageHeader } from "@/components/PageHeader";
 
 export async function generateMetadata({
   params,
@@ -21,14 +22,14 @@ export default async function AboutPage({
   const t = await getTranslations("About");
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
-      <h1 className="text-3xl font-bold tracking-tight">{t("title")}</h1>
-      <p className="mt-6 text-lg text-black/80 dark:text-white/80">
-        {t("body")}
-      </p>
-      <p className="mt-6 text-sm text-black/60 dark:text-white/60">
-        {t("verificationNote")}
-      </p>
+    <div>
+      <PageHeader kicker="Who we are" title={t("title")} />
+      <div className="mx-auto max-w-3xl px-6 py-16">
+        <p className="text-lg leading-relaxed text-ink-soft">{t("body")}</p>
+        <p className="mt-8 border-l-2 border-cyan-500 pl-4 text-sm text-ink-soft">
+          {t("verificationNote")}
+        </p>
+      </div>
     </div>
   );
 }

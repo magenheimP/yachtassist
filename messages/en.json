@@ -6,9 +6,7 @@
   },
   "Nav": {
     "home": "Home",
-    "guide": "Bring Your Yacht",
-    "procedures": "Procedures",
-    "laws": "Laws & Regulations",
+    "guide": "Arrival Guide",
     "fuelPrice": "Fuel Price",
     "about": "About",
     "contact": "Contact"
@@ -28,30 +26,130 @@
     "invalidEmail": "Please enter a valid email address."
   },
   "Home": {
-    "heroTitle": "Everything you need to bring your yacht to Montenegro",
+    "heroTitle": "Everything you need to facilitate your stay in Montenegro",
     "heroSubtitle": "Clearance, customs, duty-free fuel, insurance, and the rules of Boka Bay — in one place, kept current.",
-    "heroCta": "Read the guide",
-    "sectionsHeading": "Start here",
-    "guideTitle": "Bring Your Yacht to Montenegro",
-    "guideDescription": "The complete checklist: vignette, clearance, customs, insurance, and speed limits.",
-    "proceduresTitle": "Procedures",
-    "proceduresDescription": "Step-by-step clearance, customs, and immigration procedures.",
-    "lawsTitle": "Laws & Regulations",
-    "lawsDescription": "Vignette, insurance minimums, VAT and fuel rules, speed limits.",
-    "fuelPriceTitle": "Fuel Price",
-    "fuelPriceDescription": "This week's retail and duty-free yacht fuel prices."
+    "heroCta": "Read the guide"
   },
-  "Guide": {
-    "title": "Bring Your Yacht to Montenegro",
-    "intro": "A practical, always-current checklist for arriving in Montenegro by yacht — from first contact with port authorities to your first night at anchor."
+  "Hub": {
+    "kicker": "Bring your yacht to Montenegro",
+    "tabsLabel": "Guide sections",
+    "soon": "Soon",
+    "proceduresTab": "Clearance",
+    "proceduresTabDescription": "Customs, immigration and the harbour master, step by step.",
+    "vignetteTab": "Vignette & Tourist Tax",
+    "vignetteTabDescription": "Estimate your cruising permit fee and tourist tax.",
+    "lawsTab": "Laws",
+    "lawsTabDescription": "The official laws and decrees, ready to download."
   },
   "Procedures": {
-    "title": "Procedures",
+    "title": "Clearance Procedures",
     "intro": "Clearance, customs, and immigration procedures for yachts arriving in Montenegro."
+  },
+  "Vignette": {
+    "title": "Vignette & Tourist Tax",
+    "intro": "Work out what your vignette (cruising permit) and tourist tax will cost before you arrive.",
+    "sourceNote": "The vignette fee comes from Article 28 of the Law on Yachts, and the tourist tax from the Decree on Tourist Tax for Nautical Tourism Vessels. You can download both from the <laws>Laws</laws> tab. The Harbour Master's office confirms the final amount when you buy the vignette.",
+    "form": {
+      "heading": "Vignette",
+      "useLabel": "Yacht use",
+      "uses": {
+        "private": "Private",
+        "commercial": "Commercial"
+      },
+      "typeLabel": "Boat type",
+      "typePlaceholder": "Select a boat type",
+      "types": {
+        "boatUpTo7m": "Boat under 7 m",
+        "sailing": "Sailing yacht",
+        "motor": "Motor yacht",
+        "multihull": "Multihull yacht",
+        "over24m": "Yacht 24 m or longer"
+      },
+      "lengthLabel": "Length",
+      "lengthPlaceholder": "e.g. 12.5",
+      "lengthUnit": "m",
+      "lengthHint": "Overall length, as on your registration.",
+      "periodLabel": "Valid for",
+      "periodPlaceholder": "Select a period",
+      "periods": {
+        "24h": "24 hours",
+        "7d": "7 days",
+        "1m": "1 month",
+        "3m": "3 months",
+        "6m": "6 months",
+        "1y": "1 year"
+      },
+      "resultKicker": "Vignette fee",
+      "typeOptions": {
+        "boatUpTo7m": "Boat under 7 m",
+        "sailing": "Sailing yacht (7 m to under 24 m)",
+        "motor": "Motor yacht (7 m to under 24 m)",
+        "multihull": "Multihull yacht (7 m to under 24 m)",
+        "over24m": "Yacht 24 m or longer (any type)"
+      },
+      "ranges": {
+        "boatUpTo7m": "shorter than 7 m",
+        "sailing": "7 m to under 24 m",
+        "motor": "7 m to under 24 m",
+        "multihull": "7 m to under 24 m",
+        "over24m": "24 m or longer"
+      },
+      "lengthRangeHint": "Must be {range}.",
+      "lengthError": "Doesn't fit this boat type. Must be {range}.",
+      "resultEmpty": "Fill in the form to see the fee.",
+      "resultInvalid": "The length doesn't fit the boat type you chose.",
+      "adminFeeNote": "Includes the {fee} administrative fee."
+    },
+    "touristTax": {
+      "heading": "Tourist tax",
+      "lengthLabel": "Length",
+      "lengthPlaceholder": "Select a length",
+      "lengths": {
+        "upTo10": "7 to 10 m",
+        "upTo15": "Over 10 m, up to 15 m",
+        "upTo20": "Over 15 m, up to 20 m",
+        "over20": "Over 20 m"
+      },
+      "periodLabel": "Stay",
+      "periodPlaceholder": "Select a period",
+      "periods": {
+        "7d": "Up to 7 days",
+        "15d": "Up to 15 days",
+        "30d": "Up to 30 days",
+        "90d": "Up to 90 days",
+        "1y": "Up to 1 year"
+      },
+      "resultKicker": "Tourist tax",
+      "resultEmpty": "Choose the length and stay to see the tax.",
+      "note": "A flat amount per yacht, covering everyone aboard for the whole period."
+    }
   },
   "Laws": {
     "title": "Laws & Regulations",
-    "intro": "Vignette and navigation permits, insurance minimums, VAT and duty-free fuel rules, and speed limits in Montenegrin waters."
+    "intro": "The official laws and decrees that apply to yachts in Montenegro, ready to download.",
+    "documents": {
+      "heading": "Official documents",
+      "intro": "The Montenegrin versions are the legally binding ones; the English versions are translations for reference.",
+      "pages": "{count, plural, one {# page} other {# pages}}",
+      "languages": {
+        "en": "English",
+        "cnr": "Montenegrin"
+      },
+      "items": {
+        "lawOnYachts": {
+          "title": "Law on Yachts",
+          "description": "The main yacht law: registration, entering, staying in and leaving Montenegrin waters, the vignette, chartering, and fines."
+        },
+        "touristTax": {
+          "title": "Decree on Tourist Tax for Nautical Tourism Vessels",
+          "description": "The flat-rate tourist tax for yachts and ships, set by boat length and length of stay."
+        },
+        "visaRegime": {
+          "title": "Decree on Visa Regime",
+          "description": "Which nationalities can enter Montenegro without a visa, and for how long. Worth checking for crew and guests."
+        }
+      }
+    }
   },
   "FuelPrice": {
     "title": "Fuel Price",
@@ -60,7 +158,10 @@
     "dutyFreeLabel": "Duty-free yacht diesel",
     "perLiter": "per liter",
     "lastUpdated": "Last updated",
-    "noData": "No fuel price has been entered yet."
+    "noData": "No fuel price has been entered yet.",
+    "badgeRetail": "Retail",
+    "badgeDutyFree": "Duty-free",
+    "badgeLabel": "Fuel prices per liter: retail {retail}, duty-free yacht {dutyFree}. Updated {updated}."
   },
   "About": {
     "title": "About",

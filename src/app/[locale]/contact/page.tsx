@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { PageHeader } from "@/components/PageHeader";
 
 const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@example.com";
 
@@ -23,27 +24,24 @@ export default async function ContactPage({
   const t = await getTranslations("Contact");
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
-      <h1 className="text-3xl font-bold tracking-tight">{t("title")}</h1>
-      <p className="mt-3 text-lg text-black/70 dark:text-white/70">
-        {t("intro")}
-      </p>
+    <div>
+      <PageHeader kicker="Get in touch" title={t("title")} intro={t("intro")} />
 
-      <div className="mt-8 rounded-lg border border-black/10 p-6 dark:border-white/10">
-        <p className="text-sm font-medium text-black/60 dark:text-white/60">
-          {t("emailLabel")}
-        </p>
-        <a
-          href={`mailto:${CONTACT_EMAIL}`}
-          className="mt-1 block text-lg font-medium underline underline-offset-2 hover:no-underline"
-        >
-          {CONTACT_EMAIL}
-        </a>
+      <div className="mx-auto max-w-3xl px-6 py-16">
+        <div className="rounded-2xl border border-border-soft bg-white p-8">
+          <p className="text-sm font-semibold tracking-wide text-ink-soft uppercase">
+            {t("emailLabel")}
+          </p>
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="mt-2 block text-2xl font-medium tracking-tight text-cyan-700 hover:text-cyan-600"
+          >
+            {CONTACT_EMAIL}
+          </a>
+        </div>
+
+        <p className="mt-8 text-sm text-ink-soft">{t("correctionsNote")}</p>
       </div>
-
-      <p className="mt-6 text-sm text-black/60 dark:text-white/60">
-        {t("correctionsNote")}
-      </p>
     </div>
   );
 }

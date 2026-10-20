@@ -14,8 +14,10 @@ export default async function AdminArticlePage({
   const article = await getArticle(slug as ArticleSlug, "en");
 
   return (
-    <div>
-      <h2 className="text-lg font-semibold">Edit: {slug}</h2>
+    <div className="rounded-2xl border border-border-soft bg-white p-6">
+      <h2 className="text-lg font-semibold text-ink">
+        Edit: {slug}
+      </h2>
       <ArticleForm
         slug={slug}
         title={article?.title ?? ""}

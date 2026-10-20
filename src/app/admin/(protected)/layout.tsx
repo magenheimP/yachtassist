@@ -13,15 +13,15 @@ export default async function ProtectedAdminLayout({
   }
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-8">
-      <header className="flex items-center justify-between border-b border-black/10 pb-4 dark:border-white/10">
-        <Link href="/admin" className="font-semibold">
-          Yacht Assist Admin
+    <div className="mx-auto max-w-2xl px-4 py-10">
+      <header className="flex items-center justify-between border-b border-border-soft pb-5">
+        <Link href="/admin" className="text-lg font-semibold text-ink">
+          Yacht Assist <span className="text-cyan-600">Admin</span>
         </Link>
         <form action={logoutAction}>
           <button
             type="submit"
-            className="text-sm text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
+            className="text-sm text-ink-soft hover:text-ink"
           >
             Sign out
           </button>
