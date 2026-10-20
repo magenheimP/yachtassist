@@ -8,7 +8,7 @@
     "home": "Home",
     "guide": "Arrival Guide",
     "fuelPrice": "Fuel Price",
-    "about": "About",
+    "contractors": "Contractors",
     "contact": "Contact"
   },
   "Footer": {
@@ -163,11 +163,121 @@
     "badgeDutyFree": "Duty-free",
     "badgeLabel": "Fuel prices per liter: retail {retail}, duty-free yacht {dutyFree}. Updated {updated}."
   },
-  "About": {
-    "title": "About",
-    "intro": "Why this site exists.",
-    "body": "Yacht Assist Montenegro exists to be the single most useful place to plan and run a yacht visit to Montenegro. Our starting point is a simple observation: the real competition isn't another directory — it's a captain Googling around and piecing together scattered Google Maps pins. We're building the info hub first: clearance and customs procedures, Montenegrin yacht laws, and a fuel price that's kept genuinely current, week to week. A directory of verified service providers — agents, provisioning, maintenance, transfers, chandlery, berths — comes next, free for yachters to browse and contact.",
-    "verificationNote": "Content on this site is reviewed and updated by hand. If you spot something out of date or incorrect, please let us know via the contact page."
+  "Contractors": {
+    "kicker": "Local services",
+    "title": "Contractors",
+    "intro": "Local contractors for yachts in Montenegro, from engine servicing to provisioning and help ashore. Pick a category, then call or email them directly.",
+    "filterLabel": "Filter by category",
+    "all": "All",
+    "marinaNote": "Berthed in a marina? Check with the marina office before a contractor starts work on board. Some marinas, Porto Montenegro among them, require contractors to announce their work in advance.",
+    "listingNote": "Run a yacht service in Montenegro, or spotted outdated details? <contact>Get in touch</contact>.",
+    "categories": {
+      "engines": {
+        "title": "Engines",
+        "description": "Servicing and repair, by engine brand."
+      },
+      "electrical": {
+        "title": "Electrical & Electronics",
+        "description": "Boat electrics, generators, navigation and onboard systems."
+      },
+      "airConditioning": {
+        "title": "Air Conditioning & Appliances",
+        "description": "Air conditioning and appliance repair."
+      },
+      "sailsRigging": {
+        "title": "Sails & Rigging",
+        "description": "Sail repair, making and storage, and rigging."
+      },
+      "paintFiberglass": {
+        "title": "Paint & Fiberglass",
+        "description": "Painting, fiberglass and hull work."
+      },
+      "welding": {
+        "title": "Welding & Stainless Steel",
+        "description": "Welding and stainless steel fabrication."
+      },
+      "interiors": {
+        "title": "Interiors & Carpentry",
+        "description": "Upholstery, covers and awnings, carpentry and teak."
+      },
+      "cranes": {
+        "title": "Cranes",
+        "description": "Crane hire, with lifting capacity where known."
+      },
+      "surveyors": {
+        "title": "Surveyors",
+        "description": "Pre-sale and damage surveys, inspections and expert assessments."
+      },
+      "safety": {
+        "title": "Safety Equipment",
+        "description": "Servicing and inspection of safety equipment."
+      },
+      "chandlery": {
+        "title": "Chandlery & Supplies",
+        "description": "Yacht parts, equipment and supplies."
+      },
+      "provisioning": {
+        "title": "Provisioning",
+        "description": "Food, drinks and supplies for the boat."
+      },
+      "gasWaste": {
+        "title": "Gas & Waste",
+        "description": "Gas supply and black tank disposal."
+      },
+      "cleaning": {
+        "title": "Cleaning & Laundry",
+        "description": "Laundry, and cleaning and polishing on board."
+      },
+      "guardinage": {
+        "title": "Guardinage",
+        "description": "Someone to look after the boat while you're away."
+      },
+      "medical": {
+        "title": "Medical & Dental",
+        "description": "Clinics, labs and dentists for crew and guests."
+      },
+      "vet": {
+        "title": "Vet",
+        "description": "Veterinary care for pets on board."
+      },
+      "florists": {
+        "title": "Florists",
+        "description": "Flowers for the boat and for guests."
+      }
+    },
+    "items": {
+      "yachtProService": "Also Onan marine generators, ABT-TRAC stabilizers, Energy Solutions and E-Plex systems, and Hamann waste treatment systems.",
+      "technomarine": "Engine servicing and repair, and crane hire.",
+      "ditronic": "Boat electrics repair, electrical diagnostics on Kohler and Cummins generators, and gangway electrics (Opacmare, Besenzoni).",
+      "boatservice": "Generators, power systems and watermakers. Also sail repair, making and storage, rigging, stainless steel fabrication, hull and fiberglass work, and teak and other carpentry.",
+      "yachtElectronicalService": "Navigation and cartography, satellite TV and internet, yacht control systems, thermal cameras, NMEA networking, ship tracking and monitoring, underwater lights and marine displays.",
+      "autoKlimePavicevic": "Air conditioning.",
+      "kiko": "Appliance servicing.",
+      "avelYachting": "Sail repair, making and storage, rigging, and guardinage.",
+      "marinArt": "Sails, interiors, deck flooring, tents, cases and covers, a restoration workshop, and general service and maintenance.",
+      "yachtHomeMontenegro": "Interiors and exteriors. Official sales and service point for UK Sailmakers Turkey.",
+      "micicPaint": "Painting and fiberglass.",
+      "ardura": "Painting and black tank disposal.",
+      "lightHouse": "Carpentry.",
+      "legnoSanto": "Carpentry.",
+      "luxUpholstery": "Interior and exterior upholstery, cushions, awnings, winter and protective covers, window protection, bed linen and curtains.",
+      "radulovic": "2.5 t and 3.5 t cranes.",
+      "micanovic": "5 t (14 m) and 8 t (17 m) cranes.",
+      "pmcInvest": "40 t crane.",
+      "montenegroMarineSurveys": "Pre-sale and damage surveys, new boat acceptance inspections, cruising preparation and hull inspections. Also the Montenegro importer of Exide batteries.",
+      "aleksandarBozovic": "Sworn court marine expert and assessor.",
+      "popaj": "Gas supply.",
+      "totalYachtCare": "Daily cleaning and polishing.",
+      "polarClean": "Laundry.",
+      "maxClean": "Laundry.",
+      "adriaticaWash": "Laundry.",
+      "mansaMedica": "General medical clinic.",
+      "vitaFeminae": "Gynecologist.",
+      "mojLab": "Blood tests and lab analysis.",
+      "milmedika": "Blood tests and lab analysis.",
+      "drSevaljevic": "Dental clinic.",
+      "dentalSmile": "Dental clinic."
+    }
   },
   "Contact": {
     "title": "Contact",

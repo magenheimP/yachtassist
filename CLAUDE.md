@@ -70,7 +70,7 @@ Each push to a branch rebuilds its link in 1–2 minutes. Vercel project:
 - **Home** (`/`) — one screen, no scrolling: a background photo
   (`public/images/hero.webp`), the title, and a button into the Arrival Guide. The
   footer is hidden here, and the header turns transparent over the photo.
-- **Header** (every page) — the logo, an **Arrival Guide** dropdown, About,
+- **Header** (every page) — the logo, an **Arrival Guide** dropdown, Contractors,
   Contact, and an always-visible **fuel price badge** (retail and duty-free).
 - **Arrival Guide** — one panel with tabs. The tab list lives in `src/lib/hub.ts`.
   - **Clearance** (`/procedures`) — an article edited in `/admin`.
@@ -80,7 +80,10 @@ Each push to a branch rebuilds its link in 1–2 minutes. Vercel project:
     Vessels).
   - **Laws** (`/laws`) — downloadable official PDFs (`src/lib/lawDocuments.ts`,
     `public/documents/`).
-- **Fuel Price** (`/fuel-price`), **About**, **Contact**.
+- **Contractors** (`/contractors`) — local contractors by category, with a category
+  filter. A static list in `src/lib/contractors.ts` (from Porto Montenegro's
+  contractor list), not the Phase 2 directory. It replaced the About page.
+- **Fuel Price** (`/fuel-price`), **Contact**.
 - **Admin** (`/admin`, password) — fuel price and the Clearance article.
 - **Text**: all user-facing text is in `messages/en.json`.
 - **Design**: the Schibsted Grotesk font everywhere, navy and cyan. The

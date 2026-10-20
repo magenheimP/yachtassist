@@ -10,7 +10,7 @@ export function SiteNav() {
   const t = useTranslations("Nav");
 
   const links = [
-    { href: "/about", label: t("about") },
+    { href: "/contractors", label: t("contractors") },
     { href: "/contact", label: t("contact") },
   ] as const;
 

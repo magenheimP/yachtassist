@@ -15,7 +15,7 @@ export function SiteFooter() {
       label: hub(`${section.key}Tab`),
     })),
     { href: "/fuel-price", label: nav("fuelPrice") },
-    { href: "/about", label: nav("about") },
+    { href: "/contractors", label: nav("contractors") },
     { href: "/contact", label: nav("contact") },
   ];
 
