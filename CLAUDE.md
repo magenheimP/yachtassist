@@ -56,7 +56,7 @@ and follow these rules:
 
 ### Preview links
 
-- Partner's version (`partner`): https://yachtassist-git-partner-yachtassistme.vercel.app
+- Partner's version (`partner`): https://yachtassist-milosh.vercel.app
 - Petar's dev version (`dev`): https://yachtassist-git-dev-yachtassistme.vercel.app
 - Live site (`main`): https://yachtassist.vercel.app
 
