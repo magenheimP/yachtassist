@@ -8,6 +8,83 @@
 
 ---
 
+## 0. Branches, previews, and who works where (read this first)
+
+Two people work on this repo:
+
+- **Petar** — the developer. Works locally on `dev`.
+- **The business partner** — not technical. Asks for changes in plain language
+  through Claude in the browser (claude.ai/code) or the Claude phone app.
+
+| Branch | What it is | Who changes it |
+|---|---|---|
+| `main` | The real site (Vercel production). | Petar only, by merging `dev`. Protected. |
+| `dev` | Petar's live development version. | Petar only. Protected. |
+| `partner` | The partner's version: `dev` plus his changes. GitHub's default branch, so cloud sessions start here. | The partner's Claude sessions. |
+
+Every branch has its own always-on Vercel link. Work flows
+`partner` → (Petar reviews) → `dev` → (when ready) → `main`.
+
+### If you are a cloud session, you are working for the partner
+
+You are in a cloud session when `echo $CLAUDE_CODE_REMOTE` prints `true`. Unless the
+person tells you they are Petar, assume you are working with the business partner,
+and follow these rules:
+
+1. **Start from the latest work.** Before editing, run `git fetch origin` and merge
+   `origin/partner` and then `origin/dev` into your branch, so you build on his earlier
+   changes and Petar's latest work. If a merge conflicts, stop, undo it
+   (`git merge --abort`), and tell him in plain words that Petar needs to look first.
+2. **Keep changes small** and limited to what he asked. For anything big — a new
+   page, removing something, a redesign — describe the plan in plain words and get
+   his OK before editing.
+3. **Check your work**: `npm ci`, then `npm run lint` and
+   `npx next typegen && npx tsc --noEmit`. Fix what you broke.
+4. **Publish to his branch**: commit with a plain-English message, then
+   `git push origin HEAD:partner`. That updates his preview link (allow 1–2 minutes).
+   Pushing your own session branch as well is fine; `partner` is the one that counts.
+5. **Never** push to `main` or `dev`, force-push, or delete branches.
+6. **Report back in plain language**: what changed, where to look, and the link to
+   his version of the site (see "Preview links" below). No code jargon.
+7. **Don't change these without a source or Petar's OK**: the vignette and tourist
+   tax rates (`src/lib/vignette.ts`, `src/lib/touristTax.ts`), the legal documents
+   (`src/lib/lawDocuments.ts`, `public/documents/`), anything under `src/app/admin/`,
+   `prisma/`, or `.env*`.
+8. **Content he can edit himself** in the site's admin (`/admin`): the weekly fuel
+   price and the Clearance article. Point him there instead of changing code.
+9. **The repository is public.** Never put passwords, keys, or personal data in code.
+
+### Preview links
+
+- Partner's version (`partner`): _Petar: fill in after the Vercel setup_
+- Petar's dev version (`dev`): _fill in_
+- Live site (`main`): _fill in_
+
+---
+
+## Current site map (as of 2026-10-20)
+
+- **Home** (`/`) — one screen, no scrolling: a background photo
+  (`public/images/hero.webp`), the title, and a button into the Arrival Guide. The
+  footer is hidden here, and the header turns transparent over the photo.
+- **Header** (every page) — the logo, an **Arrival Guide** dropdown, About,
+  Contact, and an always-visible **fuel price badge** (retail and duty-free).
+- **Arrival Guide** — one panel with tabs. The tab list lives in `src/lib/hub.ts`.
+  - **Clearance** (`/procedures`) — an article edited in `/admin`.
+  - **Vignette & Tourist Tax** (`/vignette`) — two calculators. The rates are in
+    `src/lib/vignette.ts` (Law on Yachts, Article 28; plus a €2 administrative fee)
+    and `src/lib/touristTax.ts` (Decree on Tourist Tax for Nautical Tourism
+    Vessels).
+  - **Laws** (`/laws`) — downloadable official PDFs (`src/lib/lawDocuments.ts`,
+    `public/documents/`).
+- **Fuel Price** (`/fuel-price`), **About**, **Contact**.
+- **Admin** (`/admin`, password) — fuel price and the Clearance article.
+- **Text**: all user-facing text is in `messages/en.json`.
+- **Design**: the Schibsted Grotesk font everywhere, navy and cyan. The
+  `on-photo:` Tailwind variant styles the header when it sits over the home photo.
+
+---
+
 ## 1. What we're building
 
 A two-sided marketplace website for the **yachting scene in Montenegro**. It serves
@@ -46,6 +123,10 @@ customs, duty-free fuel, insurance minimums, speed limits in Boka Bay, etc. Our 
 launch-day competitor is "a captain Googling and finding scattered Google Maps pins."
 Being the best single answer to that question is what makes the site stick. This is
 pure content — no auth, no payments — and it should be the centerpiece of v0.
+
+> **Update (Oct 2026):** this became the **Arrival Guide** panel (Clearance ·
+> Vignette & Tourist Tax · Laws). The separate checklist page was dropped on
+> purpose; `/guide` redirects to Clearance. Don't bring it back unless asked.
 
 ---
 
@@ -103,6 +184,8 @@ domain gets added later (not yet chosen — see §8).
   and clearly distinguishes **retail** fuel from **duty-free yacht** fuel.
 - **About** + **Contact**.
 - Newsletter signup (email only; optional fields can come later).
+  _Status: the component and API exist, but no page shows the signup since the home
+  page became a single screen. It still needs a new place._
 
 **Admin (minimal, no fancy panel yet):**
 - A simple protected form to **enter/update the weekly fuel price** (with the
