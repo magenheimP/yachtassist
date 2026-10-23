@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { CLEARANCE_IN } from "@/content/clearanceIn";
+import { CLEARANCE_OUT } from "@/content/clearanceOut";
 import { ENTERING_MONTENEGRO } from "@/content/enteringMontenegro";
 
 // Montenegro Guide tabs whose text is edited in /admin. Each has built-in
@@ -9,12 +10,17 @@ import { ENTERING_MONTENEGRO } from "@/content/enteringMontenegro";
 // The old "guide", "laws" and "procedures" (the previous Clearance tab)
 // articles are no longer shown anywhere; their rows are left in the database
 // (and prisma/seed.ts) so the text can be reused.
-export const ARTICLE_SLUGS = ["entering-montenegro", "clearance-in"] as const;
+export const ARTICLE_SLUGS = [
+  "entering-montenegro",
+  "clearance-in",
+  "clearance-out",
+] as const;
 export type ArticleSlug = (typeof ARTICLE_SLUGS)[number];
 
 const BUILT_IN: Record<ArticleSlug, { title: string; body: string }> = {
   "entering-montenegro": ENTERING_MONTENEGRO,
   "clearance-in": CLEARANCE_IN,
+  "clearance-out": CLEARANCE_OUT,
 };
 
 export async function getArticle(slug: ArticleSlug, locale: string) {

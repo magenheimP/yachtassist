@@ -51,7 +51,7 @@
     "deliveryTab": "Delivery of Goods to Montenegro and VAT return",
     "deliveryTabDescription": "Receiving spare parts and other goods, and getting VAT back.",
     "clearanceOutTab": "Clearance OUT",
-    "clearanceOutTabDescription": "The formalities for leaving Montenegro.",
+    "clearanceOutTabDescription": "Harbour Master, Border Police and Customs before you leave.",
     "lawsTab": "Laws",
     "lawsTabDescription": "The official laws and decrees, ready to download."
   },
@@ -148,7 +148,7 @@
   },
   "ClearanceOut": {
     "title": "Clearance OUT",
-    "intro": "What to do before you leave Montenegrin waters."
+    "intro": "Clearing out of Montenegro by yacht, step by step: Harbour Master's Office, Border Police and Customs."
   },
   "Laws": {
     "title": "Laws & Regulations",

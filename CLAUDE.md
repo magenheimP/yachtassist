@@ -51,8 +51,8 @@ and follow these rules:
    (`src/lib/lawDocuments.ts`, `public/documents/`), anything under `src/app/admin/`,
    `prisma/`, or `.env*`.
 8. **Content he can edit himself** in the site's admin (`/admin`): the weekly fuel
-   price and the Entering Montenegro and Clearance IN articles. Point him there
-   instead of changing code.
+   price and the Entering Montenegro, Clearance IN and Clearance OUT articles.
+   Point him there instead of changing code.
 9. **The repository is public.** Never put passwords, keys, or personal data in code.
 
 ### Preview links
@@ -81,15 +81,16 @@ Each push to a branch rebuilds its link in 1–2 minutes. Vercel project:
   previous / next links at the bottom. The tab list lives in `src/lib/hub.ts`;
   `soon` tabs are placeholders (noindex, out of the sitemap, skipped by
   previous / next).
-  - **Entering Montenegro** (`/entering-montenegro`) and **Clearance IN**
-    (`/clearance-in`) — articles edited in `/admin`. Their built-in text is in
-    `src/content/`, shown until the admin saves a version (then the database wins).
+  - **Entering Montenegro** (`/entering-montenegro`), **Clearance IN**
+    (`/clearance-in`) and **Clearance OUT** (`/clearance-out`) — articles edited
+    in `/admin`. Their built-in text is in `src/content/`, shown until the admin
+    saves a version (then the database wins).
   - **Vignette & Tourist Tax Calculator** (`/vignette`) — two calculators. The
     rates are in `src/lib/vignette.ts` (Law on Yachts, Article 28; plus a €2
     administrative fee) and `src/lib/touristTax.ts` (Decree on Tourist Tax for
     Nautical Tourism Vessels).
-  - **Delivery of Goods to Montenegro and VAT return** (`/delivery-of-goods`) and
-    **Clearance OUT** (`/clearance-out`) — placeholders, no content yet.
+  - **Delivery of Goods to Montenegro and VAT return** (`/delivery-of-goods`) —
+    a placeholder, no content yet.
   - **Laws** (`/laws`) — downloadable official PDFs grouped by topic (Yachts &
     Navigation, Border, Visas & Cash, Customs, Taxes), in
     `src/lib/lawDocuments.ts` and `public/documents/`. Mostly Montenegrin-only.
@@ -103,7 +104,8 @@ Each push to a branch rebuilds its link in 1–2 minutes. Vercel project:
 - **Community** (`/community`) — a "coming soon" placeholder (noindex, out of the
   sitemap).
 - **Fuel Price** (`/fuel-price`), **Contact**.
-- **Admin** (`/admin`, password) — fuel price, Entering Montenegro and Clearance IN.
+- **Admin** (`/admin`, password) — fuel price, Entering Montenegro, Clearance IN
+  and Clearance OUT.
 - **Text**: all user-facing text is in `messages/en.json`.
 - **Design**: the Schibsted Grotesk font everywhere, navy and cyan. The
   `on-photo:` Tailwind variant styles the header when it sits over the home photo.

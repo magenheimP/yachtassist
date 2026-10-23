@@ -61,7 +61,6 @@ export const HUB_SECTIONS: HubSection[] = [
     key: "clearanceOut",
     namespace: "ClearanceOut",
     icon: DepartIcon,
-    soon: true,
   },
   { href: "/laws", key: "laws", namespace: "Laws", icon: ScaleIcon },
 ];
