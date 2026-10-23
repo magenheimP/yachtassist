@@ -8,8 +8,8 @@ import {
   type Contractor,
   type ContractorCategory,
 } from "@/lib/contractors";
+import { Dropdown } from "@/components/Dropdown";
 import {
-  ChevronDownIcon,
   GlobeIcon,
   MailIcon,
   MapPinIcon,
@@ -36,24 +36,20 @@ export function ContractorDirectory() {
 
   return (
     <div>
-      <div className="relative sm:hidden">
-        <select
-          aria-label={t("filterLabel")}
-          value={active ?? ""}
-          onChange={(event) =>
-            setActive((event.target.value || null) as ContractorCategory | null)
-          }
-          className="w-full appearance-none rounded-xl border border-border-soft bg-white py-3 pr-11 pl-4 text-[15px] font-semibold text-ink focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 focus:outline-none"
-        >
-          <option value="">{t("allCategories")}</option>
-          {CONTRACTOR_CATEGORIES.map((category) => (
-            <option key={category} value={category}>
-              {`${t(`categories.${category}.title`)} (${contractorsIn(category).length})`}
-            </option>
-          ))}
-        </select>
-        <ChevronDownIcon className="pointer-events-none absolute top-1/2 right-4 h-4 w-4 -translate-y-1/2 text-ink-soft" />
-      </div>
+      <Dropdown
+        label={t("filterLabel")}
+        value={active ?? ""}
+        onChange={(category) => setActive(category || null)}
+        options={[
+          { value: "", label: t("allCategories") },
+          ...CONTRACTOR_CATEGORIES.map((category) => ({
+            value: category,
+            label: `${t(`categories.${category}.title`)} (${contractorsIn(category).length})`,
+          })),
+        ]}
+        className="sm:hidden"
+        buttonClassName="rounded-xl border border-border-soft bg-white px-4 py-3 text-[15px] font-semibold text-ink focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 focus:outline-none"
+      />
 
       <div
         role="group"

@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { HUB_SECTIONS } from "@/lib/hub";
-import { ChevronDownIcon } from "@/components/icons";
+import { Dropdown } from "@/components/Dropdown";
 
 export function SoonPill({ label }: { label: string }) {
   return (
@@ -13,8 +13,8 @@ export function SoonPill({ label }: { label: string }) {
   );
 }
 
-// The Montenegro Guide's section switcher. On phones, one dropdown (a native
-// select, so the phone's own picker opens) showing the current section; from
+// The Montenegro Guide's section switcher. On phones, one dropdown showing
+// the current section (picking another goes straight there); from
 // sm up, pill tabs that wrap onto more rows so every section stays visible.
 // ("Soon" shows in the header menus only; the placeholder pages say it.)
 export function HubTabs({ className }: { className?: string }) {
@@ -25,24 +25,19 @@ export function HubTabs({ className }: { className?: string }) {
 
   return (
     <nav aria-label={t("tabsLabel")} className={className}>
-      <div className="relative sm:hidden">
-        {current && (
-          <current.icon className="pointer-events-none absolute top-1/2 left-4 h-5 w-5 -translate-y-1/2 text-cyan-600" />
-        )}
-        <select
-          aria-label={t("tabsLabel")}
-          value={current?.href ?? ""}
-          onChange={(event) => router.push(event.target.value)}
-          className="w-full appearance-none rounded-xl border border-border-soft bg-white py-3 pr-11 pl-12 text-[15px] font-semibold text-ink focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 focus:outline-none"
-        >
-          {HUB_SECTIONS.map((section) => (
-            <option key={section.href} value={section.href}>
-              {t(`${section.key}Tab`) + (section.soon ? ` (${t("soon")})` : "")}
-            </option>
-          ))}
-        </select>
-        <ChevronDownIcon className="pointer-events-none absolute top-1/2 right-4 h-4 w-4 -translate-y-1/2 text-ink-soft" />
-      </div>
+      <Dropdown
+        label={t("tabsLabel")}
+        value={current?.href ?? ""}
+        onChange={(href) => router.push(href)}
+        options={HUB_SECTIONS.map((section) => ({
+          value: section.href,
+          label:
+            t(`${section.key}Tab`) + (section.soon ? ` (${t("soon")})` : ""),
+          icon: section.icon,
+        }))}
+        className="sm:hidden"
+        buttonClassName="rounded-xl border border-border-soft bg-white px-4 py-3 text-[15px] font-semibold text-ink focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 focus:outline-none"
+      />
 
       <ul className="hidden flex-wrap gap-2 sm:flex">
         {HUB_SECTIONS.map((section) => {
