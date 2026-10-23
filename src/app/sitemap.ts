@@ -8,6 +8,7 @@ const PATHS = [
   ...HUB_SECTIONS.filter((section) => !section.soon).map((s) => s.href),
   "/fuel-price",
   "/contractors",
+  "/port-agents",
   "/contact",
 ];
 

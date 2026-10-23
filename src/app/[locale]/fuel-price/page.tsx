@@ -36,7 +36,7 @@ export default async function FuelPricePage({
     <div>
       <PageHeader kicker="Updated weekly" title={t("title")} intro={t("intro")} />
 
-      <div className="mx-auto max-w-3xl px-6 py-16">
+      <div className="mx-auto max-w-3xl px-6 py-10 sm:py-16">
         {fuelPrice ? (
           <>
             <div className="grid gap-5 sm:grid-cols-2">

@@ -27,7 +27,7 @@ export default async function ContactPage({
     <div>
       <PageHeader kicker="Get in touch" title={t("title")} intro={t("intro")} />
 
-      <div className="mx-auto max-w-3xl px-6 py-16">
+      <div className="mx-auto max-w-3xl px-6 py-10 sm:py-16">
         <div className="rounded-2xl border border-border-soft bg-white p-8">
           <p className="text-sm font-semibold tracking-wide text-ink-soft uppercase">
             {t("emailLabel")}

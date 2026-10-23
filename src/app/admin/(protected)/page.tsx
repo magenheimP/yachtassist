@@ -4,7 +4,9 @@ import { ARTICLE_SLUGS } from "@/lib/articles";
 import { FuelPriceForm } from "./FuelPriceForm";
 
 const ARTICLE_LABELS: Record<string, string> = {
-  procedures: "Clearance Procedures",
+  "entering-montenegro": "Entering Montenegro",
+  "clearance-in": "Clearance IN",
+  "clearance-out": "Clearance OUT",
 };
 
 export default async function AdminDashboardPage() {

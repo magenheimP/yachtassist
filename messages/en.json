@@ -6,10 +6,14 @@
   },
   "Nav": {
     "home": "Home",
-    "guide": "Arrival Guide",
+    "guide": "Montenegro Guide",
     "fuelPrice": "Fuel Price",
     "contractors": "Contractors",
-    "contact": "Contact"
+    "community": "Community",
+    "portAgents": "Port Agents",
+    "contact": "Contact",
+    "menu": "Menu",
+    "closeMenu": "Close menu"
   },
   "Footer": {
     "tagline": "Independent yachting information for Montenegro.",
@@ -34,16 +38,30 @@
     "kicker": "Bring your yacht to Montenegro",
     "tabsLabel": "Guide sections",
     "soon": "Soon",
-    "proceduresTab": "Clearance",
-    "proceduresTabDescription": "Customs, immigration and the harbour master, step by step.",
-    "vignetteTab": "Vignette & Tourist Tax",
+    "soonNote": "We're writing this section. Check back soon.",
+    "pagerLabel": "More of the guide",
+    "previous": "Previous",
+    "next": "Next",
+    "enteringTab": "Entering Montenegro",
+    "enteringTabDescription": "Where to clear in, the Q flag, and speed limits in Boka Bay.",
+    "clearanceInTab": "Clearance IN",
+    "clearanceInTabDescription": "Border Police, Harbour Master and Customs, step by step.",
+    "vignetteTab": "Vignette & Tourist Tax Calculator",
     "vignetteTabDescription": "Estimate your cruising permit fee and tourist tax.",
+    "deliveryTab": "Delivery of Goods to Montenegro and VAT return",
+    "deliveryTabDescription": "Receiving spare parts and other goods, and getting VAT back.",
+    "clearanceOutTab": "Clearance OUT",
+    "clearanceOutTabDescription": "Harbour Master, Border Police and Customs before you leave.",
     "lawsTab": "Laws",
     "lawsTabDescription": "The official laws and decrees, ready to download."
   },
-  "Procedures": {
-    "title": "Clearance Procedures",
-    "intro": "Clearance, customs, and immigration procedures for yachts arriving in Montenegro."
+  "Entering": {
+    "title": "Entering Montenegro",
+    "intro": "Where to clear in when you arrive by sea, the Q flag, and the speed limits in Boka Bay."
+  },
+  "ClearanceIn": {
+    "title": "Clearance IN",
+    "intro": "Clearing into Montenegro by yacht, step by step: Border Police, Harbour Master's Office, Customs and the tourist tax."
   },
   "Vignette": {
     "title": "Vignette & Tourist Tax",
@@ -65,7 +83,7 @@
         "multihull": "Multihull yacht",
         "over24m": "Yacht 24 m or longer"
       },
-      "lengthLabel": "Length",
+      "lengthLabel": "Length overall (LOA)",
       "lengthPlaceholder": "e.g. 12.5",
       "lengthUnit": "m",
       "lengthHint": "Overall length, as on your registration.",
@@ -124,29 +142,92 @@
       "note": "A flat amount per yacht, covering everyone aboard for the whole period."
     }
   },
+  "Delivery": {
+    "title": "Delivery of Goods to Montenegro and VAT return",
+    "intro": "How to receive spare parts and other goods in Montenegro, and how to get VAT back."
+  },
+  "ClearanceOut": {
+    "title": "Clearance OUT",
+    "intro": "Clearing out of Montenegro by yacht, step by step: Harbour Master's Office, Border Police and Customs."
+  },
   "Laws": {
     "title": "Laws & Regulations",
-    "intro": "The official laws and decrees that apply to yachts in Montenegro, ready to download.",
+    "intro": "The official laws, decrees and rulebooks that apply to yachts in Montenegro, grouped by topic and ready to download.",
     "documents": {
-      "heading": "Official documents",
-      "intro": "The Montenegrin versions are the legally binding ones; the English versions are translations for reference.",
+      "note": "Most of these are published in Montenegrin only. Where a law also has an English translation, the Montenegrin text is the legally binding one.",
+      "topicsLabel": "Topics",
       "pages": "{count, plural, one {# page} other {# pages}}",
       "languages": {
         "en": "English",
-        "cnr": "Montenegrin"
+        "cnr": "Montenegrin",
+        "mul": "English & Montenegrin"
+      },
+      "categories": {
+        "yachts": {
+          "title": "Yachts & Navigation",
+          "description": "The boat itself: registration, the vignette, chartering and safe navigation."
+        },
+        "border": {
+          "title": "Border, Visas & Cash",
+          "description": "Border checks for crew and guests, who needs a visa, and declaring cash."
+        },
+        "customs": {
+          "title": "Customs",
+          "description": "Bringing a yacht in temporarily, duty-free fuel and supplies, and how customs works."
+        },
+        "taxes": {
+          "title": "Taxes",
+          "description": "Tourist tax, VAT and VAT refunds."
+        }
       },
       "items": {
         "lawOnYachts": {
           "title": "Law on Yachts",
           "description": "The main yacht law: registration, entering, staying in and leaving Montenegrin waters, the vignette, chartering, and fines."
         },
-        "touristTax": {
-          "title": "Decree on Tourist Tax for Nautical Tourism Vessels",
-          "description": "The flat-rate tourist tax for yachts and ships, set by boat length and length of stay."
+        "maritimeSafety": {
+          "title": "Law on Safety of Maritime Navigation",
+          "description": "Adopted in December 2025, replacing the 2013 law. Safe navigation and traffic control, Montenegrin-flagged ships and boats and their crews, harbour master's offices, search and rescue, and fines."
+        },
+        "borderControl": {
+          "title": "Law on Border Control",
+          "description": "Border checks for vessels: the skipper sends the crew and passenger list to the police at least 24 hours before arrival, reports any crew changes, and gives notice before leaving."
         },
         "visaRegime": {
           "title": "Decree on Visa Regime",
           "description": "Which nationalities can enter Montenegro without a visa, and for how long. Worth checking for crew and guests."
+        },
+        "foreignExchange": {
+          "title": "Law on Current and Capital Transactions with Foreign Countries",
+          "description": "Montenegro's foreign exchange law. Among other things, cash above the limit set by the Central Bank has to be declared to customs when you enter or leave."
+        },
+        "temporaryAdmission": {
+          "title": "Convention on Temporary Admission (Istanbul Convention)",
+          "description": "The international convention on bringing goods and means of transport in temporarily without paying import duties and taxes, with Montenegro's ratification law. Annex C covers means of transport, yachts included. The English original and the Montenegrin translation in one file."
+        },
+        "shipSupplies": {
+          "title": "Rulebook on Supplies for Vessels and Aircraft in International Traffic",
+          "description": "How yachts and ships leaving Montenegro take on duty-free fuel, lubricants and provisions under customs supervision, and the paperwork involved. In force since 2024, replacing the 2006 rulebook."
+        },
+        "customsProcedures": {
+          "title": "Decree on Customs Procedures and Formalities",
+          "description": "The detailed rules for customs procedures and formalities, temporary admission among them, including checks on baggage aboard pleasure craft. Consolidated text, with amendments up to 2025."
+        },
+        "customsService": {
+          "title": "Law on the Customs Service",
+          "description": "How the customs service is organised and what customs officers may do, such as checking documents and searching goods, means of transport and people."
+        },
+        "touristTax": {
+          "title": "Decree on Tourist Tax for Nautical Tourism Vessels",
+          "description": "The flat-rate tourist tax for yachts and ships, set by boat length and length of stay."
+        },
+        "vatLaw": {
+          "title": "Law on Value Added Tax",
+          "description": "Montenegro's VAT law, including where boat hire is taxed and the right of visitors to a VAT refund on goods they take out of the country. Consolidated text, with amendments up to 2024."
+        },
+        "vatRulebook": {
+          "title": "Rulebook on the Application of the VAT Law",
+          "description": "The detailed VAT rules, including the conditions for a refund: over €100 per receipt, goods out of Montenegro within three months, and a form stamped by customs. Spare parts fitted to foreign-registered yachts during repairs qualify too. Consolidated text, with amendments up to 2024."
         }
       }
     }
@@ -169,6 +250,7 @@
     "intro": "Local contractors for yachts in Montenegro, from engine servicing to provisioning and help ashore. Pick a category, then call or email them directly.",
     "filterLabel": "Filter by category",
     "all": "All",
+    "allCategories": "All categories",
     "marinaNote": "Berthed in a marina? Check with the marina office before a contractor starts work on board. Some marinas, Porto Montenegro among them, require contractors to announce their work in advance.",
     "listingNote": "Run a yacht service in Montenegro, or spotted outdated details? <contact>Get in touch</contact>.",
     "categories": {
@@ -278,6 +360,20 @@
       "drSevaljevic": "Dental clinic.",
       "dentalSmile": "Dental clinic."
     }
+  },
+  "Community": {
+    "title": "Community",
+    "intro": "Questions and answers from captains and crew cruising Montenegro."
+  },
+  "PortAgents": {
+    "kicker": "Clearance & paperwork",
+    "title": "Port Agents",
+    "intro": "Port agents in Montenegro who can handle clearance and paperwork for you. Call or email them directly.",
+    "listingNote": "Run a port agency in Montenegro, or spotted outdated details? <contact>Get in touch</contact>."
+  },
+  "ComingSoon": {
+    "kicker": "Coming soon",
+    "note": "We're building this page. Until then, the <guide>Montenegro Guide</guide> walks you through arriving and clearing in, and <contractors>Contractors</contractors> lists local services."
   },
   "Contact": {
     "title": "Contact",

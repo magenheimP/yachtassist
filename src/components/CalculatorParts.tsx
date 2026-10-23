@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from "@/components/icons";
+import { Dropdown } from "@/components/Dropdown";
 
 // Building blocks shared by the vignette and tourist tax calculators.
 
@@ -85,32 +85,19 @@ export function SelectField<T extends string>({
 }) {
   return (
     <div>
-      <label htmlFor={id} className={fieldLabel}>
+      <span id={`${id}-label`} className={fieldLabel}>
         {label}
-      </label>
-      <div className="relative mt-2.5">
-        <select
-          id={id}
-          value={value}
-          onChange={(event) => onChange(event.target.value as T)}
-          className={`${control} appearance-none pr-11 ${value ? "" : "text-ink-soft"}`}
-        >
-          <option value="" disabled>
-            {placeholder}
-          </option>
-          {options.map((option) => (
-            <option
-              key={option.value}
-              value={option.value}
-              disabled={option.disabled}
-              className="text-ink disabled:text-ink-soft/50"
-            >
-              {option.label}
-            </option>
-          ))}
-        </select>
-        <ChevronDownIcon className="pointer-events-none absolute top-1/2 right-4 h-4 w-4 -translate-y-1/2 text-ink-soft" />
-      </div>
+      </span>
+      <Dropdown
+        id={id}
+        labelledBy={`${id}-label`}
+        value={value}
+        placeholder={placeholder}
+        onChange={onChange}
+        options={options}
+        className="mt-2.5"
+        buttonClassName={control}
+      />
     </div>
   );
 }
