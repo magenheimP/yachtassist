@@ -83,7 +83,7 @@
         "multihull": "Multihull yacht",
         "over24m": "Yacht 24 m or longer"
       },
-      "lengthLabel": "Length",
+      "lengthLabel": "Length overall (LOA)",
       "lengthPlaceholder": "e.g. 12.5",
       "lengthUnit": "m",
       "lengthHint": "Overall length, as on your registration.",
