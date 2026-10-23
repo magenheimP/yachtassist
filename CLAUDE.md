@@ -89,15 +89,18 @@ Each push to a branch rebuilds its link in 1–2 minutes. Vercel project:
     Nautical Tourism Vessels).
   - **Delivery of Goods to Montenegro and VAT return** (`/delivery-of-goods`) and
     **Clearance OUT** (`/clearance-out`) — placeholders, no content yet.
-  - **Laws** (`/laws`) — downloadable official PDFs (`src/lib/lawDocuments.ts`,
-    `public/documents/`).
+  - **Laws** (`/laws`) — downloadable official PDFs grouped by topic (Yachts &
+    Navigation, Border, Visas & Cash, Customs, Taxes), in
+    `src/lib/lawDocuments.ts` and `public/documents/`. Mostly Montenegrin-only.
   - `/procedures` (the old Clearance tab) redirects to Clearance IN, `/guide` to
     Entering Montenegro.
 - **Contractors** (`/contractors`) — local contractors by category, with a category
   filter. A static list in `src/lib/contractors.ts` (from Porto Montenegro's
   contractor list), not the Phase 2 directory. It replaced the About page.
-- **Community** (`/community`) and **Port Agents** (`/port-agents`) — "coming
-  soon" placeholders (noindex, out of the sitemap).
+- **Port Agents** (`/port-agents`) — port agents with their contact details. A
+  static list in `src/lib/portAgents.ts` (from the partner's list).
+- **Community** (`/community`) — a "coming soon" placeholder (noindex, out of the
+  sitemap).
 - **Fuel Price** (`/fuel-price`), **Contact**.
 - **Admin** (`/admin`, password) — fuel price, Entering Montenegro and Clearance IN.
 - **Text**: all user-facing text is in `messages/en.json`.

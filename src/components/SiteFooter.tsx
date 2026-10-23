@@ -16,6 +16,7 @@ export function SiteFooter() {
     })),
     { href: "/fuel-price", label: nav("fuelPrice") },
     { href: "/contractors", label: nav("contractors") },
+    { href: "/port-agents", label: nav("portAgents") },
     { href: "/contact", label: nav("contact") },
   ];
 

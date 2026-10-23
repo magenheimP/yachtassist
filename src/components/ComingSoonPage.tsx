@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { PageHeader } from "@/components/PageHeader";
 import { HUB_HOME } from "@/lib/hub";
 
-// A header page that's announced but not built yet (Community, Port Agents):
+// A header page that's announced but not built yet (Community):
 // title, intro and pointers to what already exists. Kept out of search
 // results and the sitemap until it has content.
 export async function ComingSoonPage({
