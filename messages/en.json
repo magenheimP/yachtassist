@@ -11,7 +11,9 @@
     "contractors": "Contractors",
     "community": "Community",
     "portAgents": "Port Agents",
-    "contact": "Contact"
+    "contact": "Contact",
+    "menu": "Menu",
+    "closeMenu": "Close menu"
   },
   "Footer": {
     "tagline": "Independent yachting information for Montenegro.",
@@ -37,6 +39,9 @@
     "tabsLabel": "Guide sections",
     "soon": "Soon",
     "soonNote": "We're writing this section. Check back soon.",
+    "pagerLabel": "More of the guide",
+    "previous": "Previous",
+    "next": "Next",
     "enteringTab": "Entering Montenegro",
     "enteringTabDescription": "Where to clear in, the Q flag, and speed limits in Boka Bay.",
     "clearanceInTab": "Clearance IN",
@@ -190,6 +195,7 @@
     "intro": "Local contractors for yachts in Montenegro, from engine servicing to provisioning and help ashore. Pick a category, then call or email them directly.",
     "filterLabel": "Filter by category",
     "all": "All",
+    "allCategories": "All categories",
     "marinaNote": "Berthed in a marina? Check with the marina office before a contractor starts work on board. Some marinas, Porto Montenegro among them, require contractors to announce their work in advance.",
     "listingNote": "Run a yacht service in Montenegro, or spotted outdated details? <contact>Get in touch</contact>.",
     "categories": {

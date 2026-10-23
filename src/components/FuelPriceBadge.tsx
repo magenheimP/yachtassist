@@ -21,10 +21,11 @@ export async function FuelPriceBadge({ className }: { className?: string }) {
   const fuelPrice = await getLatestFuelPrice();
 
   const linkClass = `group flex shrink-0 items-center gap-2 rounded-xl border border-transparent px-1.5 py-1 transition-colors hover:border-cyan-300 hover:bg-cyan-50 sm:gap-2.5 sm:border-border-soft sm:px-3 sm:py-1.5 on-photo:hover:border-white/40 on-photo:hover:bg-white/10 on-photo:sm:border-white/25 ${className ?? ""}`;
+  // The pump makes way for the menu button on narrow phones.
   const icon = (
     <span
       aria-hidden
-      className="h-7 w-7 shrink-0 bg-cyan-600 on-photo:bg-cyan-300"
+      className="h-7 w-7 shrink-0 bg-cyan-600 max-[399px]:hidden on-photo:bg-cyan-300"
       style={fuelIconMask}
     />
   );

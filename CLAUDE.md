@@ -73,9 +73,13 @@ Each push to a branch rebuilds its link in 1–2 minutes. Vercel project:
   The footer is hidden here, and the header turns transparent over the photo.
 - **Header** (every page) — the logo, a **Montenegro Guide** dropdown,
   Contractors, Community, Port Agents, and an always-visible **fuel price badge**
-  (retail and duty-free). Contact is in the footer only.
-- **Montenegro Guide** — one panel with pill tabs. The tab list lives in
-  `src/lib/hub.ts`; `soon` tabs are placeholders (noindex, out of the sitemap).
+  (retail and duty-free). Contact is in the footer only. Below `lg` (phones,
+  tablets) the links move into a menu button (`MobileMenu`) so the header stays
+  one row; check new header items at 360px wide.
+- **Montenegro Guide** — one panel with pill tabs (a dropdown on phones) and
+  previous / next links at the bottom. The tab list lives in `src/lib/hub.ts`;
+  `soon` tabs are placeholders (noindex, out of the sitemap, skipped by
+  previous / next).
   - **Entering Montenegro** (`/entering-montenegro`) and **Clearance IN**
     (`/clearance-in`) — articles edited in `/admin`. Their built-in text is in
     `src/content/`, shown until the admin saves a version (then the database wins).

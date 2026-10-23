@@ -23,7 +23,7 @@ export async function ComingSoonPage({
   return (
     <div>
       <PageHeader kicker={soon("kicker")} title={t("title")} intro={t("intro")} />
-      <div className="mx-auto max-w-3xl px-6 py-16">
+      <div className="mx-auto max-w-3xl px-6 py-10 sm:py-16">
         <p className="border-l-2 border-cyan-500 pl-4 text-ink-soft">
           {soon.rich("note", {
             guide: (chunks) => (

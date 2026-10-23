@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { HubMenu } from "@/components/HubMenu";
 import { FuelPriceBadge } from "@/components/FuelPriceBadge";
 import { HeaderShell } from "@/components/HeaderShell";
+import { MobileMenu } from "@/components/MobileMenu";
 import { NavLink } from "@/components/NavLink";
 import { SiteLogo } from "@/components/SiteLogo";
 
@@ -22,7 +23,7 @@ export function SiteNav() {
 
   return (
     <HeaderShell>
-      <nav className="mx-auto flex w-full max-w-[90rem] items-center gap-3 px-4 py-4 sm:gap-4 sm:px-8 lg:px-10 lg:py-6">
+      <nav className="mx-auto flex w-full max-w-[90rem] items-center gap-2 px-4 py-4 max-[359px]:px-3 sm:gap-4 sm:px-8 lg:px-10 lg:py-6">
         <Link href="/" className="shrink-0" aria-label="Yacht Assist Montenegro">
           <SiteLogo
             className="text-ink on-photo:text-white"
@@ -42,19 +43,8 @@ export function SiteNav() {
           ))}
         </ul>
         <FuelPriceBadge className="ml-auto lg:ml-4 xl:ml-8" />
+        <MobileMenu links={links} />
       </nav>
-      <ul className="flex items-center gap-6 overflow-x-auto border-t border-border-soft/70 px-4 py-2.5 text-xs text-ink sm:px-8 lg:hidden on-photo:border-white/15 on-photo:text-white">
-        <li className="shrink-0">
-          <HubMenu triggerClassName={navItem} />
-        </li>
-        {links.map((link) => (
-          <li key={link.href} className="shrink-0">
-            <NavLink href={link.href} className={navItem}>
-              {link.label}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
     </HeaderShell>
   );
 }

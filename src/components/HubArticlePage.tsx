@@ -15,11 +15,13 @@ export function HubPage({
   children?: React.ReactNode;
 }) {
   return (
-    <article className="mx-auto max-w-3xl px-6 py-14">
-      <h1 className="text-4xl font-normal tracking-tight text-ink sm:text-6xl">
+    <article className="mx-auto max-w-3xl px-6 py-10 sm:py-14">
+      <h1 className="text-[2rem]/[1.15] font-normal tracking-tight text-ink sm:text-6xl">
         {title}
       </h1>
-      <p className="mt-5 text-lg leading-relaxed text-ink-soft">{intro}</p>
+      <p className="mt-4 text-lg leading-relaxed text-ink-soft sm:mt-5">
+        {intro}
+      </p>
       {children}
     </article>
   );

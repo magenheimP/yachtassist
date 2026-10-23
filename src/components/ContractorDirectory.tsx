@@ -8,7 +8,13 @@ import {
   type Contractor,
   type ContractorCategory,
 } from "@/lib/contractors";
-import { GlobeIcon, MailIcon, MapPinIcon, PhoneIcon } from "@/components/icons";
+import {
+  ChevronDownIcon,
+  GlobeIcon,
+  MailIcon,
+  MapPinIcon,
+  PhoneIcon,
+} from "@/components/icons";
 
 const chip =
   "inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-medium transition-colors";
@@ -19,8 +25,9 @@ const chipActive = "border-cyan-600 bg-cyan-600 text-white";
 const contactLink =
   "inline-flex min-w-0 items-start gap-2 text-cyan-700 wrap-anywhere hover:text-cyan-600";
 
-// Category chips over the full list; picking one narrows the list to it.
-// Everything is in the server-rendered HTML ("All" is the initial state).
+// Category chips (a dropdown on phones) over the full list; picking one
+// narrows the list to it. Everything is in the server-rendered HTML ("All" is
+// the initial state).
 export function ContractorDirectory() {
   const t = useTranslations("Contractors");
   const [active, setActive] = useState<ContractorCategory | null>(null);
@@ -29,10 +36,29 @@ export function ContractorDirectory() {
 
   return (
     <div>
+      <div className="relative sm:hidden">
+        <select
+          aria-label={t("filterLabel")}
+          value={active ?? ""}
+          onChange={(event) =>
+            setActive((event.target.value || null) as ContractorCategory | null)
+          }
+          className="w-full appearance-none rounded-xl border border-border-soft bg-white py-3 pr-11 pl-4 text-[15px] font-semibold text-ink focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 focus:outline-none"
+        >
+          <option value="">{t("allCategories")}</option>
+          {CONTRACTOR_CATEGORIES.map((category) => (
+            <option key={category} value={category}>
+              {`${t(`categories.${category}.title`)} (${contractorsIn(category).length})`}
+            </option>
+          ))}
+        </select>
+        <ChevronDownIcon className="pointer-events-none absolute top-1/2 right-4 h-4 w-4 -translate-y-1/2 text-ink-soft" />
+      </div>
+
       <div
         role="group"
         aria-label={t("filterLabel")}
-        className="flex flex-wrap gap-2"
+        className="hidden flex-wrap gap-2 sm:flex"
       >
         <button
           type="button"
@@ -58,7 +84,7 @@ export function ContractorDirectory() {
         ))}
       </div>
 
-      <div className="mt-12 space-y-14">
+      <div className="mt-8 space-y-10 sm:mt-12 sm:space-y-14">
         {shown.map((category) => (
           <section key={category} aria-labelledby={`contractors-${category}`}>
             <h2

@@ -27,7 +27,7 @@ export default async function ContractorsPage({
   return (
     <div>
       <PageHeader kicker={t("kicker")} title={t("title")} intro={t("intro")} />
-      <div className="mx-auto max-w-3xl px-6 py-16">
+      <div className="mx-auto max-w-3xl px-6 py-10 sm:py-16">
         <ContractorDirectory />
 
         <p className="mt-14 flex gap-3 rounded-2xl bg-surface-alt px-5 py-4 text-sm leading-relaxed text-ink-soft">
