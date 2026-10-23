@@ -43,8 +43,9 @@ export function ArticleForm({
           Use &quot;## Heading&quot; for section headings, &quot;###
           Subheading&quot; for smaller ones, lines starting
           with &quot;- &quot; for bullet lists or &quot;1. &quot; for numbered
-          lists, &quot;**text**&quot; for bold, and blank lines between
-          paragraphs.
+          lists, &quot;&gt; &quot; for a note in a grey box,
+          &quot;**text**&quot; for bold, &quot;[Laws](/laws)&quot; for a
+          link, and blank lines between paragraphs.
         </p>
         <textarea
           id="body"

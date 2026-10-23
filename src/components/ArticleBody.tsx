@@ -1,8 +1,10 @@
 import { Link } from "@/i18n/navigation";
+import { InfoIcon } from "@/components/icons";
 
 // Renders the constrained plain-text format articles are authored in:
-// "## " headings, "### " subheadings, "- " / "1. " list items, blank-line
-// separated paragraphs, **bold** text, and [text](/relative-link) links.
+// "## " headings, "### " subheadings, "- " / "1. " list items, "> " notes
+// (an info box, e.g. which law a section comes from), blank-line separated
+// paragraphs, **bold** text, and [text](/relative-link) links.
 // Deliberately not a full Markdown parser — admin-authored content only needs
 // this much structure, and it keeps the render path free of
 // dangerouslySetInnerHTML.
@@ -54,6 +56,20 @@ export function ArticleBody({ body }: { body: string }) {
                 <li key={j}>{renderInline(l.replace(/^\d+\.\s/, ""))}</li>
               ))}
             </ol>
+          );
+        }
+
+        if (lines.every((l) => l.startsWith(">"))) {
+          return (
+            <p
+              key={i}
+              className="flex gap-3 rounded-2xl bg-surface-alt px-5 py-4 text-sm leading-relaxed text-ink-soft"
+            >
+              <InfoIcon className="mt-0.5 h-5 w-5 shrink-0 text-cyan-600" />
+              <span>
+                {renderInline(lines.map((l) => l.slice(1).trim()).join(" "))}
+              </span>
+            </p>
           );
         }
 

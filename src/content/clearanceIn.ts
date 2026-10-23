@@ -44,6 +44,8 @@ You should also use the same travel document consistently for your entry and sub
 
 These requirements are governed by Montenegro's Law on Foreigners, including Article 9 (Entry into and Stay in Montenegro) and Article 34 (Stay of up to 90 Days), together with the applicable visa regime.
 
+> Who needs a visa, and for how long they can stay, is set by the Decree on Visa Regime in the [Laws](/laws) tab. A crew member without a visa they need can, at the skipper's request, get a pass from the police to move around the port area while the yacht stays, for up to 90 days (Article 22 of the Law on Yachts).
+
 Once the Border Police have completed the initial formalities, proceed to the Harbour Master's Office.
 
 ## 3. Harbour Master's Office – Yacht Documentation and Vignette
@@ -64,6 +66,8 @@ The Harbour Master's Office will examine the documentation and determine whether
 
 The vignette is the official document issued for a foreign yacht under the applicable Montenegrin regulations. It records the relevant information and authorisations associated with the yacht's stay and navigation in Montenegro.
 
+> Article 20 of the Law on Yachts lists the documents for the vignette. It asks for certificates of competency for the crew as well as the skipper, and yachts used commercially in Montenegro also need compulsory insurance under Montenegrin law. The vignette covers the tender and other craft carried on board, which must be insured too (Article 21). It must be displayed in a prominent place and is valid for up to one year (Article 23). Its fee is set by Article 28, and the [Vignette calculator](/vignette) works it out.
+
 ### What Happens if the Vignette Cannot Be Issued?
 
 If the Harbour Master's Office identifies a problem with the documentation, the captain may be given a period of up to 24 hours to resolve the issue, where this is permitted by the authorities.
@@ -71,6 +75,8 @@ If the Harbour Master's Office identifies a problem with the documentation, the 
 If the problem cannot be resolved within the permitted period, the captain must go to the Border Police to complete the required departure formalities and leave Montenegro in accordance with the authorities' instructions.
 
 Do not assume that the yacht may remain in Montenegro indefinitely while the documentation issue is unresolved.
+
+> Under Article 20 of the Law on Yachts, if documents are missing, the Harbour Master's Office sets a deadline and the yacht stays at the port of entry until they are delivered. If the vignette is refused, Article 24 requires the yacht to leave by the route and within the time the office sets, though it can allow a stay for repairs, supplies, medical help or bad weather.
 
 ### Payment of Fees
 
@@ -85,6 +91,8 @@ The crew and passenger list associated with the yacht's vignette must accurately
 If crew members or passengers change, the relevant records must be updated in accordance with the applicable procedure before departure.
 
 If your yacht remains berthed in a marina and does not leave the marina, you are not required to hold a valid vignette or maintain a crew and passenger list for navigation purposes. However, if you intend to take the yacht out of the marina, you must ensure that all applicable documentation and clearance requirements are fulfilled before departure.
+
+> The crew and passenger list rules are in Article 27 of the Law on Yachts: new names are added and endorsed by the Harbour Master's Office before the yacht leaves port, and no one who isn't on the list may be on board while under way. For a yacht that isn't chartered, the list can't total more than four times the number of people allowed on board over the vignette's validity. Under Articles 25 and 26, a yacht moored or under repair in port needs no vignette until it goes out to sea.
 
 ### Final Step at the Harbour Master's Office
 
@@ -139,6 +147,8 @@ It may include information about:
 - Valuables.
 - Cash and other items subject to declaration requirements.
 
+> Under Article 10 of the Law on Current and Capital Transactions with Foreign Countries, cash above the limit set by the Central Bank of Montenegro has to be declared to Customs when you enter or leave. It's in the [Laws](/laws) tab, along with the Decree on Customs Procedures and Formalities and the Convention on Temporary Admission, which covers bringing a yacht in temporarily without paying import duties and taxes.
+
 ### Completion of Customs Formalities
 
 Once Customs has completed the required checks and declarations, the maritime check-in procedure is complete.
@@ -168,6 +178,8 @@ When registering the yacht and the persons staying on board, prepare:
 For yachts, the tourist tax is charged according to the yacht's length and the duration of the stay, rather than being calculated separately for every person on board.
 
 The applicable amount depends on the current tariff and the yacht's category or length.
+
+> The flat rates, by yacht length and length of stay, are set by the Decree on Tourist Tax for Nautical Tourism Vessels, in the [Laws](/laws) tab. The [Tourist Tax calculator](/vignette) works out the amount.
 
 ### What if the Crew or Passengers Change?
 

@@ -6,6 +6,8 @@ export const ENTERING_MONTENEGRO = {
 
 A yellow quarantine flag (Q flag) must be displayed upon arrival and remain hoisted until all clearance formalities have been completed, the required vignette has been obtained, and the competent authorities have granted permission for further navigation.
 
+> Sailing straight to a port of entry is required by Article 20 of the Law on Yachts. The same article lets you send copies of your documents ahead, by email or through a [port agent](/port-agents), so the vignette can be prepared before you arrive. Article 53 of the Law on Border Control asks for the crew and passenger list to reach the police at least 24 hours before arrival, or when you leave your last port if the trip is shorter. Both laws are in the [Laws](/laws) tab.
+
 ## Border Crossing Points
 
 Montenegro has six designated nautical border crossing points, offering clearance facilities for visiting yachts and other vessels. The available berthing facilities and services vary by location.
@@ -38,7 +40,9 @@ The Port of Kotor provides berthing facilities for all types of vessels and has 
 
 ## Navigation Rules and Speed Limits in Boka Bay
 
-When navigating through the Bay of Boka Kotorska, all vessels must proceed at a safe speed and operate with due care to avoid endangering other vessels, people, shorelines, and marine infrastructure. The maximum permitted speed is 10 knots within the bay and 6 knots in the Strait of Kumbor and the Strait of Verige, in accordance with Article 10 of Montenegro's Law on Maritime Safety (Official Gazette of Montenegro No. 160/2025).
+When navigating through the Bay of Boka Kotorska, all vessels must proceed at a safe speed and operate with due care to avoid endangering other vessels, people, shorelines, and marine infrastructure. The maximum permitted speed is 10 knots within the bay and 6 knots in the Strait of Kumbor and the Strait of Verige.
+
+> Article 8 of the Law on Safety of Maritime Navigation (Official Gazette of Montenegro No. 160/2025) requires every vessel to keep to the speed limits and to sail with particular care; the limits themselves are set in the Ministry's navigation rules. Article 10 of the same law allows anchoring only in natural anchorages, which are marked on nautical charts and free to use, and in equipped nautical anchorages. The law is in the [Laws](/laws) tab.
 
 ## Important Information for Visiting Skippers
 
