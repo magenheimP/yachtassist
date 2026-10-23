@@ -5,11 +5,12 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { SoonPill } from "@/components/HubTabs";
 import { HUB_SECTIONS } from "@/lib/hub";
-import { CloseIcon, MenuIcon } from "@/components/icons";
+import { ChevronDownIcon, CloseIcon, MenuIcon } from "@/components/icons";
 
 // Header navigation below lg (phones, tablets): a menu button that opens a
-// panel under the header with every Montenegro Guide section and the other
-// header links. Closes on picking a link, Escape, focus leaving, or tapping
+// panel under the header with the same top-level items as the desktop header.
+// Montenegro Guide expands in place to list its sections (collapsed each time
+// the menu opens). Closes on picking a link, Escape, focus leaving, or tapping
 // outside. The panel positions against the sticky header (HeaderShell) and
 // scrolls if it's taller than the screen.
 export function MobileMenu({
@@ -21,9 +22,12 @@ export function MobileMenu({
   const hub = useTranslations("Hub");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [guideOpen, setGuideOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const menuId = useId();
+  const guideId = useId();
+  const inHub = HUB_SECTIONS.some((section) => section.href === pathname);
 
   useEffect(() => {
     if (!open) return;
@@ -61,7 +65,10 @@ export function MobileMenu({
         aria-expanded={open}
         aria-controls={menuId}
         aria-label={open ? nav("closeMenu") : nav("menu")}
-        onClick={() => setOpen((o) => !o)}
+        onClick={() => {
+          setOpen((o) => !o);
+          setGuideOpen(false);
+        }}
         className="-mr-2 flex h-11 w-11 items-center justify-center rounded-xl text-ink transition-colors hover:bg-surface-alt on-photo:text-white on-photo:hover:bg-white/10"
       >
         {open ? (
@@ -78,29 +85,46 @@ export function MobileMenu({
         className="absolute inset-x-0 top-full max-h-[calc(100dvh-100%)] overflow-y-auto border-b border-border-soft bg-white shadow-xl shadow-navy-900/10 on-photo:border-white/15 on-photo:bg-navy-900/90 on-photo:backdrop-blur-xl"
       >
         <div className="mx-auto max-w-3xl px-4 py-4 sm:px-8">
-          <p className="px-3 pb-1 text-xs font-semibold tracking-[0.2em] text-cyan-600 uppercase on-photo:text-cyan-300">
-            {nav("guide")}
-          </p>
           <ul>
-            {HUB_SECTIONS.map((section) => {
-              const active = pathname === section.href;
-              return (
-                <li key={section.href}>
-                  <Link
-                    href={section.href}
-                    aria-current={active ? "page" : undefined}
-                    onClick={() => setOpen(false)}
-                    className={item(active)}
-                  >
-                    <section.icon className="h-5 w-5 shrink-0 text-cyan-600 on-photo:text-cyan-300" />
-                    <span className="min-w-0">{hub(`${section.key}Tab`)}</span>
-                    {section.soon && <SoonPill label={hub("soon")} />}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-          <ul className="mt-3 border-t border-border-soft pt-3 on-photo:border-white/15">
+            <li>
+              <button
+                type="button"
+                aria-expanded={guideOpen}
+                aria-controls={guideId}
+                onClick={() => setGuideOpen((o) => !o)}
+                className={`${item(inHub)} w-full text-left`}
+              >
+                {nav("guide")}
+                <ChevronDownIcon
+                  className={`ml-auto h-4 w-4 shrink-0 transition-transform ${guideOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              <ul
+                id={guideId}
+                hidden={!guideOpen}
+                className="mb-1 ml-3 border-l border-border-soft pl-2 on-photo:border-white/15"
+              >
+                {HUB_SECTIONS.map((section) => {
+                  const active = pathname === section.href;
+                  return (
+                    <li key={section.href}>
+                      <Link
+                        href={section.href}
+                        aria-current={active ? "page" : undefined}
+                        onClick={() => setOpen(false)}
+                        className={item(active)}
+                      >
+                        <section.icon className="h-5 w-5 shrink-0 text-cyan-600 on-photo:text-cyan-300" />
+                        <span className="min-w-0">
+                          {hub(`${section.key}Tab`)}
+                        </span>
+                        {section.soon && <SoonPill label={hub("soon")} />}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </li>
             {links.map((link) => {
               const active = pathname === link.href;
               return (

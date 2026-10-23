@@ -75,7 +75,8 @@ Each push to a branch rebuilds its link in 1–2 minutes. Vercel project:
   Contractors, Community, Port Agents, and an always-visible **fuel price badge**
   (retail and duty-free). Contact is in the footer only. Below `lg` (phones,
   tablets) the links move into a menu button (`MobileMenu`) so the header stays
-  one row; check new header items at 360px wide.
+  one row; the guide sections fold under Montenegro Guide there until tapped.
+  Check new header items at 360px wide.
 - **Montenegro Guide** — one panel with pill tabs (a dropdown on phones) and
   previous / next links at the bottom. The tab list lives in `src/lib/hub.ts`;
   `soon` tabs are placeholders (noindex, out of the sitemap, skipped by
