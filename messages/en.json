@@ -6,9 +6,11 @@
   },
   "Nav": {
     "home": "Home",
-    "guide": "Arrival Guide",
+    "guide": "Montenegro Guide",
     "fuelPrice": "Fuel Price",
     "contractors": "Contractors",
+    "community": "Community",
+    "portAgents": "Port Agents",
     "contact": "Contact"
   },
   "Footer": {
@@ -34,16 +36,27 @@
     "kicker": "Bring your yacht to Montenegro",
     "tabsLabel": "Guide sections",
     "soon": "Soon",
-    "proceduresTab": "Clearance",
-    "proceduresTabDescription": "Customs, immigration and the harbour master, step by step.",
-    "vignetteTab": "Vignette & Tourist Tax",
+    "soonNote": "We're writing this section. Check back soon.",
+    "enteringTab": "Entering Montenegro",
+    "enteringTabDescription": "Where to clear in, the Q flag, and speed limits in Boka Bay.",
+    "clearanceInTab": "Clearance IN",
+    "clearanceInTabDescription": "Border Police, Harbour Master and Customs, step by step.",
+    "vignetteTab": "Vignette & Tourist Tax Calculator",
     "vignetteTabDescription": "Estimate your cruising permit fee and tourist tax.",
+    "deliveryTab": "Delivery of Goods to Montenegro and VAT return",
+    "deliveryTabDescription": "Receiving spare parts and other goods, and getting VAT back.",
+    "clearanceOutTab": "Clearance OUT",
+    "clearanceOutTabDescription": "The formalities for leaving Montenegro.",
     "lawsTab": "Laws",
     "lawsTabDescription": "The official laws and decrees, ready to download."
   },
-  "Procedures": {
-    "title": "Clearance Procedures",
-    "intro": "Clearance, customs, and immigration procedures for yachts arriving in Montenegro."
+  "Entering": {
+    "title": "Entering Montenegro",
+    "intro": "Where to clear in when you arrive by sea, the Q flag, and the speed limits in Boka Bay."
+  },
+  "ClearanceIn": {
+    "title": "Clearance IN",
+    "intro": "Clearing into Montenegro by yacht, step by step: Border Police, Harbour Master's Office, Customs and the tourist tax."
   },
   "Vignette": {
     "title": "Vignette & Tourist Tax",
@@ -123,6 +136,14 @@
       "resultEmpty": "Choose the length and stay to see the tax.",
       "note": "A flat amount per yacht, covering everyone aboard for the whole period."
     }
+  },
+  "Delivery": {
+    "title": "Delivery of Goods to Montenegro and VAT return",
+    "intro": "How to receive spare parts and other goods in Montenegro, and how to get VAT back."
+  },
+  "ClearanceOut": {
+    "title": "Clearance OUT",
+    "intro": "What to do before you leave Montenegrin waters."
   },
   "Laws": {
     "title": "Laws & Regulations",
@@ -278,6 +299,18 @@
       "drSevaljevic": "Dental clinic.",
       "dentalSmile": "Dental clinic."
     }
+  },
+  "Community": {
+    "title": "Community",
+    "intro": "Questions and answers from captains and crew cruising Montenegro."
+  },
+  "PortAgents": {
+    "title": "Port Agents",
+    "intro": "Port agents in Montenegro who can handle clearance and paperwork for you."
+  },
+  "ComingSoon": {
+    "kicker": "Coming soon",
+    "note": "We're building this page. Until then, the <guide>Montenegro Guide</guide> walks you through arriving and clearing in, and <contractors>Contractors</contractors> lists local services."
   },
   "Contact": {
     "title": "Contact",

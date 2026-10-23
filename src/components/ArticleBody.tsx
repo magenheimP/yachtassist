@@ -1,10 +1,11 @@
 import { Link } from "@/i18n/navigation";
 
 // Renders the constrained plain-text format articles are authored in:
-// "## " headings, "- " / "1. " list items, blank-line separated paragraphs,
-// **bold** text, and [text](/relative-link) links. Deliberately not a full
-// Markdown parser — admin-authored content only needs this much structure,
-// and it keeps the render path free of dangerouslySetInnerHTML.
+// "## " headings, "### " subheadings, "- " / "1. " list items, blank-line
+// separated paragraphs, **bold** text, and [text](/relative-link) links.
+// Deliberately not a full Markdown parser — admin-authored content only needs
+// this much structure, and it keeps the render path free of
+// dangerouslySetInnerHTML.
 export function ArticleBody({ body }: { body: string }) {
   // Normalize CRLF so blocks still split on rows saved with Windows line breaks.
   const blocks = body.replace(/\r\n?/g, "\n").trim().split(/\n\n+/);
@@ -13,6 +14,17 @@ export function ArticleBody({ body }: { body: string }) {
     <div className="space-y-5 text-[17px]">
       {blocks.map((block, i) => {
         const lines = block.split("\n").map((l) => l.trim());
+
+        if (lines[0].startsWith("### ")) {
+          return (
+            <h3
+              key={i}
+              className="pt-3 text-lg font-semibold tracking-tight text-ink"
+            >
+              {lines[0].slice(4)}
+            </h3>
+          );
+        }
 
         if (lines[0].startsWith("## ")) {
           return (
@@ -78,7 +90,7 @@ function renderInline(text: string) {
       return (
         <Link
           key={i}
-          href={href as "/procedures" | "/laws" | "/fuel-price"}
+          href={href as "/clearance-in" | "/laws" | "/fuel-price"}
           className={className}
         >
           {label}

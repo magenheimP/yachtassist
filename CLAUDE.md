@@ -51,7 +51,8 @@ and follow these rules:
    (`src/lib/lawDocuments.ts`, `public/documents/`), anything under `src/app/admin/`,
    `prisma/`, or `.env*`.
 8. **Content he can edit himself** in the site's admin (`/admin`): the weekly fuel
-   price and the Clearance article. Point him there instead of changing code.
+   price and the Entering Montenegro and Clearance IN articles. Point him there
+   instead of changing code.
 9. **The repository is public.** Never put passwords, keys, or personal data in code.
 
 ### Preview links
@@ -65,26 +66,36 @@ Each push to a branch rebuilds its link in 1–2 minutes. Vercel project:
 
 ---
 
-## Current site map (as of 2026-10-20)
+## Current site map (as of 2026-10-23)
 
 - **Home** (`/`) — one screen, no scrolling: a background photo
-  (`public/images/hero.webp`), the title, and a button into the Arrival Guide. The
-  footer is hidden here, and the header turns transparent over the photo.
-- **Header** (every page) — the logo, an **Arrival Guide** dropdown, Contractors,
-  Contact, and an always-visible **fuel price badge** (retail and duty-free).
-- **Arrival Guide** — one panel with tabs. The tab list lives in `src/lib/hub.ts`.
-  - **Clearance** (`/procedures`) — an article edited in `/admin`.
-  - **Vignette & Tourist Tax** (`/vignette`) — two calculators. The rates are in
-    `src/lib/vignette.ts` (Law on Yachts, Article 28; plus a €2 administrative fee)
-    and `src/lib/touristTax.ts` (Decree on Tourist Tax for Nautical Tourism
-    Vessels).
+  (`public/images/hero.webp`), the title, and a button into the Montenegro Guide.
+  The footer is hidden here, and the header turns transparent over the photo.
+- **Header** (every page) — the logo, a **Montenegro Guide** dropdown,
+  Contractors, Community, Port Agents, and an always-visible **fuel price badge**
+  (retail and duty-free). Contact is in the footer only.
+- **Montenegro Guide** — one panel with pill tabs. The tab list lives in
+  `src/lib/hub.ts`; `soon` tabs are placeholders (noindex, out of the sitemap).
+  - **Entering Montenegro** (`/entering-montenegro`) and **Clearance IN**
+    (`/clearance-in`) — articles edited in `/admin`. Their built-in text is in
+    `src/content/`, shown until the admin saves a version (then the database wins).
+  - **Vignette & Tourist Tax Calculator** (`/vignette`) — two calculators. The
+    rates are in `src/lib/vignette.ts` (Law on Yachts, Article 28; plus a €2
+    administrative fee) and `src/lib/touristTax.ts` (Decree on Tourist Tax for
+    Nautical Tourism Vessels).
+  - **Delivery of Goods to Montenegro and VAT return** (`/delivery-of-goods`) and
+    **Clearance OUT** (`/clearance-out`) — placeholders, no content yet.
   - **Laws** (`/laws`) — downloadable official PDFs (`src/lib/lawDocuments.ts`,
     `public/documents/`).
+  - `/procedures` (the old Clearance tab) redirects to Clearance IN, `/guide` to
+    Entering Montenegro.
 - **Contractors** (`/contractors`) — local contractors by category, with a category
   filter. A static list in `src/lib/contractors.ts` (from Porto Montenegro's
   contractor list), not the Phase 2 directory. It replaced the About page.
+- **Community** (`/community`) and **Port Agents** (`/port-agents`) — "coming
+  soon" placeholders (noindex, out of the sitemap).
 - **Fuel Price** (`/fuel-price`), **Contact**.
-- **Admin** (`/admin`, password) — fuel price and the Clearance article.
+- **Admin** (`/admin`, password) — fuel price, Entering Montenegro and Clearance IN.
 - **Text**: all user-facing text is in `messages/en.json`.
 - **Design**: the Schibsted Grotesk font everywhere, navy and cyan. The
   `on-photo:` Tailwind variant styles the header when it sits over the home photo.
@@ -130,9 +141,11 @@ launch-day competitor is "a captain Googling and finding scattered Google Maps p
 Being the best single answer to that question is what makes the site stick. This is
 pure content — no auth, no payments — and it should be the centerpiece of v0.
 
-> **Update (Oct 2026):** this became the **Arrival Guide** panel (Clearance ·
-> Vignette & Tourist Tax · Laws). The separate checklist page was dropped on
-> purpose; `/guide` redirects to Clearance. Don't bring it back unless asked.
+> **Update (Oct 2026):** this became the **Montenegro Guide** panel (Entering
+> Montenegro · Clearance IN · Vignette & Tourist Tax Calculator · Delivery of
+> Goods and VAT return · Clearance OUT · Laws). The separate checklist page was
+> dropped on purpose; `/guide` redirects to Entering Montenegro. Don't bring it
+> back unless asked.
 
 ---
 

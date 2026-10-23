@@ -7,13 +7,13 @@ import { SoonPill } from "@/components/HubTabs";
 import { HUB_SECTIONS } from "@/lib/hub";
 import { ChevronDownIcon } from "@/components/icons";
 
-// Header dropdown for the Arrival Guide panel. Click to open (works the
+// Header dropdown for the Montenegro Guide panel. Click to open (works the
 // same on touch and desktop); closes on outside click, Escape, focus leaving,
 // or picking a section.
 //
-// On mobile the wrapper is deliberately not `relative`, so the menu positions
-// against the sticky header and spans its width instead of being clipped by
-// the horizontally scrolling link row it sits in.
+// Below lg (phones, tablets) the wrapper is deliberately not `relative`, so
+// the menu positions against the sticky header and spans its width instead of
+// being clipped by the horizontally scrolling link row it sits in.
 export function HubMenu({ triggerClassName }: { triggerClassName?: string }) {
   const nav = useTranslations("Nav");
   const t = useTranslations("Hub");
@@ -36,7 +36,7 @@ export function HubMenu({ triggerClassName }: { triggerClassName?: string }) {
   return (
     <div
       ref={rootRef}
-      className="md:relative"
+      className="lg:relative"
       onKeyDown={(event) => {
         if (event.key === "Escape" && open) {
           setOpen(false);
@@ -63,7 +63,7 @@ export function HubMenu({ triggerClassName }: { triggerClassName?: string }) {
       <div
         id={menuId}
         hidden={!open}
-        className="absolute top-full right-4 left-4 z-50 mt-2 rounded-2xl border border-border-soft bg-white p-2 shadow-xl shadow-navy-900/10 md:right-auto md:left-0 md:mt-5 md:w-80 on-photo:border-white/15 on-photo:bg-navy-900/75 on-photo:shadow-black/30 on-photo:backdrop-blur-xl"
+        className="absolute top-full right-4 left-4 z-50 mt-2 rounded-2xl border border-border-soft bg-white p-2 shadow-xl shadow-navy-900/10 lg:right-auto lg:left-0 lg:mt-5 lg:w-80 on-photo:border-white/15 on-photo:bg-navy-900/75 on-photo:shadow-black/30 on-photo:backdrop-blur-xl"
       >
         <ul>
           {HUB_SECTIONS.map((section) => {
