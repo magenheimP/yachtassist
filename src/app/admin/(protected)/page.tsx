@@ -7,6 +7,7 @@ const ARTICLE_LABELS: Record<string, string> = {
   "entering-montenegro": "Entering Montenegro",
   "clearance-in": "Clearance IN",
   "clearance-out": "Clearance OUT",
+  "duty-free-fuel": "Duty-Free Fuel (Fuel Price page)",
 };
 
 export default async function AdminDashboardPage() {

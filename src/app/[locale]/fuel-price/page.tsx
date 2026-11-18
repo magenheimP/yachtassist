@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { fuelPriceFormatter, getLatestFuelPrice } from "@/lib/fuelPrice";
+import { getArticle } from "@/lib/articles";
+import { ArticleBody } from "@/components/ArticleBody";
 import { PageHeader } from "@/components/PageHeader";
 
 export const dynamic = "force-dynamic";
@@ -23,7 +25,10 @@ export default async function FuelPricePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("FuelPrice");
-  const fuelPrice = await getLatestFuelPrice();
+  const [fuelPrice, guide] = await Promise.all([
+    getLatestFuelPrice(),
+    getArticle("duty-free-fuel", locale),
+  ]);
 
   const formatter = fuelPriceFormatter(locale, fuelPrice?.currency ?? "EUR");
 
@@ -65,6 +70,23 @@ export default async function FuelPricePage({
           </>
         ) : (
           <p className="text-ink-soft">{t("noData")}</p>
+        )}
+
+        {guide && (
+          <section className="mt-12 border-t border-border-soft pt-12 sm:mt-16 sm:pt-16">
+            <p className="text-xs font-semibold tracking-[0.14em] text-cyan-600 uppercase sm:text-sm sm:tracking-[0.2em]">
+              {t("guideKicker")}
+            </p>
+            <h2 className="mt-3 text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+              {guide.title}
+            </h2>
+            <p className="mt-3 text-lg leading-relaxed text-ink-soft">
+              {t("guideSubtitle")}
+            </p>
+            <div className="mt-10">
+              <ArticleBody body={guide.body} />
+            </div>
+          </section>
         )}
       </div>
     </div>

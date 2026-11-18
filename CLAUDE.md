@@ -51,8 +51,8 @@ and follow these rules:
    (`src/lib/lawDocuments.ts`, `public/documents/`), anything under `src/app/admin/`,
    `prisma/`, or `.env*`.
 8. **Content he can edit himself** in the site's admin (`/admin`): the weekly fuel
-   price and the Entering Montenegro, Clearance IN and Clearance OUT articles.
-   Point him there instead of changing code.
+   price and the Entering Montenegro, Clearance IN, Clearance OUT and Duty-Free
+   Fuel articles. Point him there instead of changing code.
 9. **The repository is public.** Never put passwords, keys, or personal data in code.
 
 ### Preview links
@@ -103,9 +103,13 @@ Each push to a branch rebuilds its link in 1–2 minutes. Vercel project:
   static list in `src/lib/portAgents.ts` (from the partner's list).
 - **Community** (`/community`) — a "coming soon" placeholder (noindex, out of the
   sitemap).
-- **Fuel Price** (`/fuel-price`), **Contact**.
-- **Admin** (`/admin`, password) — fuel price, Entering Montenegro, Clearance IN
-  and Clearance OUT.
+- **Fuel Price** (`/fuel-price`) — the weekly retail and duty-free prices, and
+  below them the **Duty-Free Fuel** guide (eligibility, documents, bunkering
+  steps), an article edited in `/admin` with built-in text in
+  `src/content/dutyFreeFuel.ts`.
+- **Contact**.
+- **Admin** (`/admin`, password) — fuel price, Entering Montenegro, Clearance IN,
+  Clearance OUT and Duty-Free Fuel.
 - **Text**: all user-facing text is in `messages/en.json`.
 - **Design**: the Schibsted Grotesk font everywhere, navy and cyan. The
   `on-photo:` Tailwind variant styles the header when it sits over the home photo.

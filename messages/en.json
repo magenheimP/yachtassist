@@ -240,6 +240,8 @@
     "perLiter": "per liter",
     "lastUpdated": "Last updated",
     "noData": "No fuel price has been entered yet.",
+    "guideKicker": "Duty-free bunkering",
+    "guideSubtitle": "Regulations, requirements and the bunkering procedure for yachts.",
     "badgeRetail": "Retail",
     "badgeDutyFree": "Duty-free",
     "badgeLabel": "Fuel prices per liter: retail {retail}, duty-free yacht {dutyFree}. Updated {updated}."
