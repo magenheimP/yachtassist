@@ -10,7 +10,7 @@ export function SiteLogo({
 }) {
   return (
     <span className={`block leading-none ${className}`}>
-      <span className="block text-[13px] font-semibold tracking-[0.2em] uppercase sm:text-base sm:tracking-[0.24em]">
+      <span className="block text-[13px] font-semibold tracking-[0.2em] uppercase max-[359px]:tracking-[0.12em] sm:text-base sm:tracking-[0.24em]">
         Yacht Assist
       </span>
       <span

@@ -8,7 +8,13 @@ import {
   type Contractor,
   type ContractorCategory,
 } from "@/lib/contractors";
-import { GlobeIcon, MailIcon, MapPinIcon, PhoneIcon } from "@/components/icons";
+import { Dropdown } from "@/components/Dropdown";
+import {
+  GlobeIcon,
+  MailIcon,
+  MapPinIcon,
+  PhoneIcon,
+} from "@/components/icons";
 
 const chip =
   "inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-medium transition-colors";
@@ -19,8 +25,9 @@ const chipActive = "border-cyan-600 bg-cyan-600 text-white";
 const contactLink =
   "inline-flex min-w-0 items-start gap-2 text-cyan-700 wrap-anywhere hover:text-cyan-600";
 
-// Category chips over the full list; picking one narrows the list to it.
-// Everything is in the server-rendered HTML ("All" is the initial state).
+// Category chips (a dropdown on phones) over the full list; picking one
+// narrows the list to it. Everything is in the server-rendered HTML ("All" is
+// the initial state).
 export function ContractorDirectory() {
   const t = useTranslations("Contractors");
   const [active, setActive] = useState<ContractorCategory | null>(null);
@@ -29,10 +36,25 @@ export function ContractorDirectory() {
 
   return (
     <div>
+      <Dropdown
+        label={t("filterLabel")}
+        value={active ?? ""}
+        onChange={(category) => setActive(category || null)}
+        options={[
+          { value: "", label: t("allCategories") },
+          ...CONTRACTOR_CATEGORIES.map((category) => ({
+            value: category,
+            label: `${t(`categories.${category}.title`)} (${contractorsIn(category).length})`,
+          })),
+        ]}
+        className="sm:hidden"
+        buttonClassName="rounded-xl border border-border-soft bg-white px-4 py-3 text-[15px] font-semibold text-ink focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 focus:outline-none"
+      />
+
       <div
         role="group"
         aria-label={t("filterLabel")}
-        className="flex flex-wrap gap-2"
+        className="hidden flex-wrap gap-2 sm:flex"
       >
         <button
           type="button"
@@ -58,7 +80,7 @@ export function ContractorDirectory() {
         ))}
       </div>
 
-      <div className="mt-12 space-y-14">
+      <div className="mt-8 space-y-10 sm:mt-12 sm:space-y-14">
         {shown.map((category) => (
           <section key={category} aria-labelledby={`contractors-${category}`}>
             <h2
