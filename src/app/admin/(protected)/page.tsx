@@ -6,6 +6,7 @@ import { FuelPriceForm } from "./FuelPriceForm";
 const ARTICLE_LABELS: Record<string, string> = {
   "entering-montenegro": "Entering Montenegro",
   "clearance-in": "Clearance IN",
+  "delivery-of-goods": "Delivery of Goods and VAT return",
   "clearance-out": "Clearance OUT",
   "duty-free-fuel": "Duty-Free Fuel (Fuel Price page)",
 };

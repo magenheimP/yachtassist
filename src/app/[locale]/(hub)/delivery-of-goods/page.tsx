@@ -1,16 +1,25 @@
 import type { Metadata } from "next";
-import { HubSoonPage, hubPageMetadata } from "@/components/HubArticlePage";
+import { HubArticlePage, hubPageMetadata } from "@/components/HubArticlePage";
+
+// Reads the admin-editable article on every request, so saves show at once.
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
 }: PageProps<"/[locale]/delivery-of-goods">): Promise<Metadata> {
   const { locale } = await params;
-  return hubPageMetadata(locale, "Delivery", { soon: true });
+  return hubPageMetadata(locale, "Delivery");
 }
 
 export default async function DeliveryOfGoodsPage({
   params,
 }: PageProps<"/[locale]/delivery-of-goods">) {
   const { locale } = await params;
-  return <HubSoonPage locale={locale} namespace="Delivery" />;
+  return (
+    <HubArticlePage
+      locale={locale}
+      slug="delivery-of-goods"
+      namespace="Delivery"
+    />
+  );
 }

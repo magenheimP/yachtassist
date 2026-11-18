@@ -54,7 +54,6 @@ export const HUB_SECTIONS: HubSection[] = [
     key: "delivery",
     namespace: "Delivery",
     icon: PackageIcon,
-    soon: true,
   },
   {
     href: "/clearance-out",

@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { CLEARANCE_IN } from "@/content/clearanceIn";
 import { CLEARANCE_OUT } from "@/content/clearanceOut";
+import { DELIVERY_OF_GOODS } from "@/content/deliveryOfGoods";
 import { DUTY_FREE_FUEL } from "@/content/dutyFreeFuel";
 import { ENTERING_MONTENEGRO } from "@/content/enteringMontenegro";
 
@@ -15,6 +16,7 @@ import { ENTERING_MONTENEGRO } from "@/content/enteringMontenegro";
 export const ARTICLE_SLUGS = [
   "entering-montenegro",
   "clearance-in",
+  "delivery-of-goods",
   "clearance-out",
   "duty-free-fuel",
 ] as const;
@@ -23,6 +25,7 @@ export type ArticleSlug = (typeof ARTICLE_SLUGS)[number];
 const BUILT_IN: Record<ArticleSlug, { title: string; body: string }> = {
   "entering-montenegro": ENTERING_MONTENEGRO,
   "clearance-in": CLEARANCE_IN,
+  "delivery-of-goods": DELIVERY_OF_GOODS,
   "clearance-out": CLEARANCE_OUT,
   "duty-free-fuel": DUTY_FREE_FUEL,
 };

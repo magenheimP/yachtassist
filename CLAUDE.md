@@ -51,8 +51,8 @@ and follow these rules:
    (`src/lib/lawDocuments.ts`, `public/documents/`), anything under `src/app/admin/`,
    `prisma/`, or `.env*`.
 8. **Content he can edit himself** in the site's admin (`/admin`): the weekly fuel
-   price and the Entering Montenegro, Clearance IN, Clearance OUT and Duty-Free
-   Fuel articles. Point him there instead of changing code.
+   price and the Entering Montenegro, Clearance IN, Delivery of Goods, Clearance
+   OUT and Duty-Free Fuel articles. Point him there instead of changing code.
 9. **The repository is public.** Never put passwords, keys, or personal data in code.
 
 ### Preview links
@@ -90,7 +90,8 @@ Each push to a branch rebuilds its link in 1–2 minutes. Vercel project:
     administrative fee) and `src/lib/touristTax.ts` (Decree on Tourist Tax for
     Nautical Tourism Vessels).
   - **Delivery of Goods to Montenegro and VAT return** (`/delivery-of-goods`) —
-    a placeholder, no content yet.
+    an article edited in `/admin` (shipping goods in, and the PDV-PP passenger
+    VAT refund); built-in text in `src/content/deliveryOfGoods.ts`.
   - **Laws** (`/laws`) — downloadable official PDFs grouped by topic (Yachts &
     Navigation, Border, Visas & Cash, Customs, Taxes), in
     `src/lib/lawDocuments.ts` and `public/documents/`. Mostly Montenegrin-only.
@@ -109,7 +110,7 @@ Each push to a branch rebuilds its link in 1–2 minutes. Vercel project:
   `src/content/dutyFreeFuel.ts`.
 - **Contact**.
 - **Admin** (`/admin`, password) — fuel price, Entering Montenegro, Clearance IN,
-  Clearance OUT and Duty-Free Fuel.
+  Delivery of Goods, Clearance OUT and Duty-Free Fuel.
 - **Text**: all user-facing text is in `messages/en.json`.
 - **Design**: the Schibsted Grotesk font everywhere, navy and cyan. The
   `on-photo:` Tailwind variant styles the header when it sits over the home photo.
